@@ -7,8 +7,11 @@
    viewBox="0 0 40.4 128.5"
    version="1.1"
    id="svg5"
-   sodipodi:docname="kass3340vco.svg"
-   inkscape:version="1.1.1 (c3084ef, 2021-09-22)"
+   sodipodi:docname="panel.svg"
+   inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
+   inkscape:export-filename="C:\Users\james\Documents\kicad\kassutronics-vco-3340\panel.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -24,14 +27,14 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="1.5946357"
-     inkscape:cx="-80.269115"
-     inkscape:cy="221.99427"
+     inkscape:cx="101.90415"
+     inkscape:cy="258.67977"
      inkscape:window-width="1620"
      inkscape:window-height="924"
-     inkscape:window-x="0"
-     inkscape:window-y="25"
+     inkscape:window-x="-1755"
+     inkscape:window-y="49"
      inkscape:window-maximized="0"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g163"
      showguides="false" />
   <defs
      id="defs2" />
@@ -42,7 +45,8 @@
     <g
        inkscape:groupmode="layer"
        inkscape:label="Panel"
-       id="panel">
+       id="panel"
+       style="display:inline">
       <rect
          x="0"
          y="0"
@@ -50,16 +54,17 @@
          height="128.5"
          rx="0"
          ry="0"
-         style="fill:none;stroke:#0000ff;stroke-width:0.01mm"
+         style="fill:none;stroke:#000000;stroke-width:0.01mm;stroke-opacity:1"
          id="rect152" />
     </g>
     <g
        inkscape:groupmode="layer"
        inkscape:label="Holes"
-       id="g161">
+       id="g161"
+       style="display:inline">
       <g
          inkscape:label="Holes"
-         style="fill:none;stroke:#0000ff;stroke-width:0.01mm"
+         style="fill:none;stroke:#000000;stroke-width:0.01mm"
          id="g159">
         <rect
            x="4.75"
@@ -68,7 +73,8 @@
            height="3.2"
            rx="1.6"
            ry="0"
-           id="rect155" />
+           id="rect155"
+           style="stroke:#000000" />
         <rect
            x="4.75"
            y="1.4"
@@ -76,7 +82,8 @@
            height="3.2"
            rx="1.6"
            ry="0"
-           id="rect157" />
+           id="rect157"
+           style="stroke:#000000" />
       </g>
     </g>
   </g>
@@ -1451,11 +1458,11 @@
        x="19.904963"
        y="46.889809"
        id="text11183"><tspan
-   sodipodi:role="line"
-   id="tspan11181"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.175px;font-family:Courier;-inkscape-font-specification:Courier;text-align:center;text-anchor:middle;stroke-width:0.264583"
-   x="19.904963"
-   y="46.889809">FREQUENCY</tspan></text>
+         sodipodi:role="line"
+         id="tspan11181"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.175px;font-family:Courier;-inkscape-font-specification:Courier;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="19.904963"
+         y="46.889809">FREQUENCY</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.175px;line-height:1.25;font-family:Courier;-inkscape-font-specification:Courier;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"

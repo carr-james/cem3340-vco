@@ -48,8 +48,30 @@
           "min_clearance": 0.508
         }
       },
-      "diff_pair_dimensions": [],
-      "drc_exclusions": [],
+      "diff_pair_dimensions": [
+        {
+          "gap": 0.0,
+          "via_gap": 0.0,
+          "width": 0.0
+        }
+      ],
+      "drc_exclusions": [
+        "silk_over_copper|0|105825000|ca66db5b-3124-4c9e-ba40-ba2fc07272fa|542d410e-d03c-4e63-aa72-b6520df4128b",
+        "silk_over_copper|0|64870000|ca66db5b-3124-4c9e-ba40-ba2fc07272fa|0b832a58-f83d-46d7-8219-03220e6bbced",
+        "silk_over_copper|0|64870000|ca66db5b-3124-4c9e-ba40-ba2fc07272fa|cf03ad8f-66ef-45f9-8345-2635d0d3edd5",
+        "silk_over_copper|0|75370000|ca66db5b-3124-4c9e-ba40-ba2fc07272fa|1525535f-a14f-4148-bf1a-2c1a2802f16c",
+        "silk_over_copper|0|80110000|ca66db5b-3124-4c9e-ba40-ba2fc07272fa|a523695c-35b4-4859-b781-154824ab5ca9",
+        "silk_over_copper|0|80110000|ca66db5b-3124-4c9e-ba40-ba2fc07272fa|b5e21c8b-4f23-470f-94c9-40687ea53ea2",
+        "silk_over_copper|0|90610000|ca66db5b-3124-4c9e-ba40-ba2fc07272fa|e4f43349-3f67-4924-9783-e918db4d09eb",
+        "silk_over_copper|0|95325000|ca66db5b-3124-4c9e-ba40-ba2fc07272fa|32d0a9c3-e885-4b75-a829-8b912e45dfaa",
+        "silk_over_copper|0|95325000|ca66db5b-3124-4c9e-ba40-ba2fc07272fa|756c4d9d-af44-437f-a135-c09675b4bdd2",
+        "silk_over_copper|39480000|105825000|ca66db5b-3124-4c9e-ba40-ba2fc07272fa|c49cdd63-d196-49a7-b408-7af3848e936c",
+        "silk_over_copper|39480000|80110000|ca66db5b-3124-4c9e-ba40-ba2fc07272fa|22a8e1bc-22fb-4e62-add4-2ae0c07ce05c",
+        "silk_over_copper|39480000|80110000|ca66db5b-3124-4c9e-ba40-ba2fc07272fa|f3749464-3429-4e5d-8e9e-7776a190bf7c",
+        "silk_over_copper|39480000|90610000|ca66db5b-3124-4c9e-ba40-ba2fc07272fa|675cfbd2-e790-4842-b368-f626e1795786",
+        "silk_over_copper|39480000|95325000|ca66db5b-3124-4c9e-ba40-ba2fc07272fa|1427beee-3bac-4761-90c7-1d211b9ad51c",
+        "silk_over_copper|39480000|95325000|ca66db5b-3124-4c9e-ba40-ba2fc07272fa|1e3fd3d5-91a2-4915-bf3d-e5e3d46d180b"
+      ],
       "meta": {
         "version": 2
       },
@@ -112,8 +134,17 @@
         "solder_mask_min_width": 0.0,
         "use_height_for_length_calcs": true
       },
-      "track_widths": [],
-      "via_dimensions": [],
+      "track_widths": [
+        0.0,
+        0.5,
+        0.89
+      ],
+      "via_dimensions": [
+        {
+          "diameter": 0.0,
+          "drill": 0.0
+        }
+      ],
       "zones_allow_external_fillets": false,
       "zones_use_no_outline": true
     },
@@ -350,7 +381,96 @@
         "name": "Default",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.25,
+        "track_width": 0.5,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6.0
+      },
+      {
+        "bus_width": 12.0,
+        "clearance": 0.2,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Power",
+        "nets": [
+          "+12VA",
+          "+5VA",
+          "-12VA",
+          "-5VA"
+        ],
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.89,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6.0
+      },
+      {
+        "bus_width": 12.0,
+        "clearance": 0.2,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Signals",
+        "nets": [
+          "/CV1",
+          "/CV2",
+          "/CV_NODE",
+          "/LINFM",
+          "/LIN_FM",
+          "/PULSE",
+          "/PULSE_OUT",
+          "/PWM",
+          "/SAW",
+          "/SAW_OUT",
+          "/SIN",
+          "/SIN_RAW",
+          "/SYNC",
+          "/TRI",
+          "/TRIANGLE_OUT",
+          "GND",
+          "Net-(C1-Pad1)",
+          "Net-(C14-Pad1)",
+          "Net-(C15-Pad1)",
+          "Net-(C4-Pad1)",
+          "Net-(C5-Pad1)",
+          "Net-(C6-Pad2)",
+          "Net-(D1-Pad2)",
+          "Net-(D3-Pad1)",
+          "Net-(Q1-Pad1)",
+          "Net-(Q1-Pad2)",
+          "Net-(R1-Pad1)",
+          "Net-(R1-Pad2)",
+          "Net-(R10-Pad1)",
+          "Net-(R11-Pad1)",
+          "Net-(R12-Pad2)",
+          "Net-(R2-Pad2)",
+          "Net-(R25-Pad2)",
+          "Net-(R33-Pad1)",
+          "Net-(R39-Pad1)",
+          "Net-(R5-Pad1)",
+          "Net-(R6-Pad1)",
+          "Net-(RV2-Pad1)",
+          "Net-(RV7-Pad2)",
+          "unconnected-(J1-PadTN)",
+          "unconnected-(J12-PadTN)",
+          "unconnected-(J2-PadTN)",
+          "unconnected-(J3-PadTN)",
+          "unconnected-(J4-PadTN)",
+          "unconnected-(J5-PadTN)",
+          "unconnected-(J6-PadTN)",
+          "unconnected-(J7-PadTN)"
+        ],
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.5,
         "via_diameter": 0.8,
         "via_drill": 0.4,
         "wire_width": 6.0
@@ -359,7 +479,18 @@
     "meta": {
       "version": 2
     },
-    "net_colors": null
+    "net_colors": {
+      "+12VA": "rgb(255, 0, 0)",
+      "+5VA": "rgb(255, 0, 0)",
+      "-12VA": "rgb(255, 0, 0)",
+      "-5VA": "rgb(255, 0, 0)",
+      "/BL3M": "rgb(255, 255, 0)",
+      "/CV_NODE": "rgb(255, 255, 0)",
+      "/SIN_RAW": "rgb(255, 255, 0)",
+      "/TR3C": "rgb(255, 255, 0)",
+      "GND": "rgb(255, 255, 0)",
+      "Net-(C14-Pad1)": "rgb(255, 255, 0)"
+    }
   },
   "pcbnew": {
     "last_paths": {
