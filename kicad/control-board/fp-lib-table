@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "cem-3340")(type "KiCad")(uri "/home/icon0049/dev/hardware/sdiy/cem3340-vco/kicad/libs/footprint/cem-3340.pretty")(options "")(descr ""))
+)

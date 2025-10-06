@@ -1,0 +1,53 @@
+kibot:
+  version: 1
+
+preflight:
+  erc: true
+  drc: true
+  check_zone_fills: true
+
+outputs:
+  - name: gerbers
+    type: gerber
+    dir: gerbers
+    layers:
+      - layer: F.Cu
+        suffix: F_Cu
+      - layer: B.Cu
+        suffix: B_Cu
+      - layer: F.SilkS
+        suffix: F_SilkS
+      - layer: B.SilkS
+        suffix: B_SilkS
+      - layer: F.Mask
+        suffix: F_Mask
+      - layer: B.Mask
+        suffix: B_Mask
+      - layer: Edge.Cuts
+        suffix: Edge_Cuts
+
+  - name: drill
+    type: excellon
+    dir: gerbers
+    options:
+      metric_units: true
+      pth_and_npth_single_file: false
+
+  - name: bom
+    type: bom
+    dir: bom
+    options:
+      output: '%f_bom_jlc.%x'
+      csv:
+        hide_pcb_info: true
+        hide_stats_info: true
+
+  - name: position
+    type: position
+    dir: position
+    options:
+      format: CSV
+      units: millimeters
+      separate_files_for_front_and_back: false
+      only_smd: false
+      output: '%f_cpl_jlc.%x'

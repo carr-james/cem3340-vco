@@ -1,0 +1,57 @@
+name: Build Control Board
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-control-board:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/inti-cmnb/kicad_auto:dev_k9
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Install zip
+        run: apt-get update && apt-get install -y zip
+      
+      - name: Generate fabrication files
+        run: |
+          kibot \
+            -c .kibot/jlcpcb.kibot.yaml \
+            -b kicad/control-board/control-board.kicad_pcb \
+            -e kicad/control-board/control-board.kicad_sch \
+            -d output/control-board \
+            -s erc,drc
+      
+      - name: Create ZIP for JLCPCB
+        run: |
+          cd output/control-board/gerbers
+          zip -r ../../../control-board-gerbers.zip *
+          
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: control-board-${{ github.ref_name }}
+          path: |
+            control-board-gerbers.zip
+            output/control-board/bom/*.csv
+            output/control-board/position/*.csv
+      
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: |
+            control-board-gerbers.zip
+            output/control-board/bom/*.csv
+            output/control-board/position/*.csv
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
