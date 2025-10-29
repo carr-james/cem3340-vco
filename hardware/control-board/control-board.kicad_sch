@@ -881,183 +881,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Switch:SW_SPDT"
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "SW"
-				(at 0 5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "SW_SPDT"
-				(at 0 -5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 -7.62 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Switch, single pole double throw"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "switch single-pole double-throw spdt ON-ON"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "SW_SPDT_0_1"
-				(circle
-					(center -2.032 0)
-					(radius 0.4572)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.651 0.254) (xy 1.651 2.286)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 2.032 2.54)
-					(radius 0.4572)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 2.032 -2.54)
-					(radius 0.4572)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "SW_SPDT_1_1"
-				(rectangle
-					(start -3.175 3.81)
-					(end 3.175 -3.81)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 2.54)
-					(name "B"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 2.54 180)
-					(length 2.54)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 -2.54 180)
-					(length 2.54)
-					(name "C"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "cem-3340:AudioJack2_SwitchT"
+		(symbol "Eurorack Common:AudioJack2_SwitchT"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1241,6 +1065,182 @@
 						)
 					)
 					(number "TN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Switch:SW_SPDT"
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "SW"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "SW_SPDT"
+				(at 0 -5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 -7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Switch, single pole double throw"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "switch single-pole double-throw spdt ON-ON"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "SW_SPDT_0_1"
+				(circle
+					(center -2.032 0)
+					(radius 0.4572)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.651 0.254) (xy 1.651 2.286)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 2.54)
+					(radius 0.4572)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 -2.54)
+					(radius 0.4572)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "SW_SPDT_1_1"
+				(rectangle
+					(start -3.175 3.81)
+					(end 3.175 -3.81)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 2.54 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -2.54 180)
+					(length 2.54)
+					(name "C"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2534,7 +2534,7 @@
 		(uuid "fbb5f69f-7bf0-46df-8524-c2e25178b3f2")
 	)
 	(symbol
-		(lib_id "cem-3340:AudioJack2_SwitchT")
+		(lib_id "Eurorack Common:AudioJack2_SwitchT")
 		(at 35.56 139.7 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -2669,7 +2669,7 @@
 		)
 	)
 	(symbol
-		(lib_id "cem-3340:AudioJack2_SwitchT")
+		(lib_id "Eurorack Common:AudioJack2_SwitchT")
 		(at 234.95 121.92 180)
 		(unit 1)
 		(exclude_from_sim no)
@@ -2805,7 +2805,7 @@
 		)
 	)
 	(symbol
-		(lib_id "cem-3340:AudioJack2_SwitchT")
+		(lib_id "Eurorack Common:AudioJack2_SwitchT")
 		(at 35.56 162.56 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -2964,7 +2964,7 @@
 				)
 			)
 		)
-		(property "Footprint" "cem-3340:Sub-Miniature SPDT"
+		(property "Footprint" "Eurorack Common:Sub-Miniature SPDT"
 			(at 60.96 139.7 0)
 			(effects
 				(font
@@ -3412,7 +3412,7 @@
 		)
 	)
 	(symbol
-		(lib_id "cem-3340:AudioJack2_SwitchT")
+		(lib_id "Eurorack Common:AudioJack2_SwitchT")
 		(at 236.22 74.93 180)
 		(unit 1)
 		(exclude_from_sim no)
@@ -3554,7 +3554,7 @@
 		)
 	)
 	(symbol
-		(lib_id "cem-3340:AudioJack2_SwitchT")
+		(lib_id "Eurorack Common:AudioJack2_SwitchT")
 		(at 234.95 99.06 180)
 		(unit 1)
 		(exclude_from_sim no)
@@ -3715,7 +3715,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "cem-3340:Alpha Potentiometer"
+		(property "Footprint" "Eurorack Common:Alpha Potentiometer"
 			(at 50.8 116.84 0)
 			(effects
 				(font
@@ -4120,7 +4120,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "cem-3340:Alpha Potentiometer"
+		(property "Footprint" "Eurorack Common:Alpha Potentiometer"
 			(at 43.18 41.91 0)
 			(effects
 				(font
@@ -4232,7 +4232,7 @@
 		)
 	)
 	(symbol
-		(lib_id "cem-3340:AudioJack2_SwitchT")
+		(lib_id "Eurorack Common:AudioJack2_SwitchT")
 		(at 35.56 120.65 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -4301,7 +4301,7 @@
 		)
 	)
 	(symbol
-		(lib_id "cem-3340:AudioJack2_SwitchT")
+		(lib_id "Eurorack Common:AudioJack2_SwitchT")
 		(at 234.95 144.78 180)
 		(unit 1)
 		(exclude_from_sim no)
@@ -4634,7 +4634,7 @@
 		)
 	)
 	(symbol
-		(lib_id "cem-3340:AudioJack2_SwitchT")
+		(lib_id "Eurorack Common:AudioJack2_SwitchT")
 		(at 35.56 93.98 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -4834,7 +4834,7 @@
 		)
 	)
 	(symbol
-		(lib_id "cem-3340:AudioJack2_SwitchT")
+		(lib_id "Eurorack Common:AudioJack2_SwitchT")
 		(at 35.56 78.74 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -5526,7 +5526,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "cem-3340:Alpha Potentiometer"
+		(property "Footprint" "Eurorack Common:Alpha Potentiometer"
 			(at 43.18 60.96 0)
 			(effects
 				(font
