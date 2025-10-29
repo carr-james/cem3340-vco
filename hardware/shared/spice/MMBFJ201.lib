@@ -1,0 +1,23 @@
+*$
+************ Discrete JFET Electrical Models ******************
+** Product: MMBFJ201
+** Package: SOT-23
+** N-Channel General Purpose Amplifier
+***************************************************************
+.MODEL MMBFJ201 NJF
++ VTO=-0.80
++ BETA=1.12052e-03
++ BETATCE=-0.608
++ RD=250.334
++ RS=250.334
++ LAMBDA=0.0198
++ IS=3.8130e-12
++ CGD=3.6920e-12
++ CGS=5.0567e-12
++ M=0.35314
++ PB=0.75440
++ VTOTC=-1.680e-3
+**************************************************************
+** Creation: Sep.-01-2023   Rev: 1.0
+** onsemi
+*$

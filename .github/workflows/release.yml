@@ -26,8 +26,8 @@ jobs:
         run: |
           kibot \
             -c .kibot/jlcpcb.kibot.yaml \
-            -b kicad/control-board/control-board.kicad_pcb \
-            -e kicad/control-board/control-board.kicad_sch \
+            -b hardware/control-board/control-board.kicad_pcb \
+            -e hardware/control-board/control-board.kicad_sch \
             -d output/control-board \
             -s erc,drc
       

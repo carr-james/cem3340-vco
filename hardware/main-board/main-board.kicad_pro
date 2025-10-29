@@ -37,9 +37,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 1.0,
-          "height": 1.7,
-          "width": 1.7
+          "drill": 0.762,
+          "height": 1.524,
+          "width": 1.524
         },
         "silk_line_width": 0.15,
         "silk_text_italic": false,
@@ -59,88 +59,7 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [
-        [
-          "courtyards_overlap|27295000|88579000|18208121-3872-4be3-a687-40854be3e1c8|85d211d4-76e7-4e49-a9c8-2e1cc8ab5805",
-          ""
-        ],
-        [
-          "courtyards_overlap|32385000|91961000|85d211d4-76e7-4e49-a9c8-2e1cc8ab5805|c11e04e4-f63f-46b9-9a9c-9c7df49e614a",
-          ""
-        ],
-        [
-          "silk_edge_clearance|15240000|105856000|4fc3183f-297c-42b7-b3bd-25a9ea18c844|e4f43349-3f67-4924-9783-e918db4d09eb",
-          ""
-        ],
-        [
-          "silk_edge_clearance|15240000|110571000|4fc3183f-297c-42b7-b3bd-25a9ea18c844|32d0a9c3-e885-4b75-a829-8b912e45dfaa",
-          ""
-        ],
-        [
-          "silk_edge_clearance|15240000|110571000|4fc3183f-297c-42b7-b3bd-25a9ea18c844|756c4d9d-af44-437f-a135-c09675b4bdd2",
-          ""
-        ],
-        [
-          "silk_edge_clearance|15240000|121071000|4fc3183f-297c-42b7-b3bd-25a9ea18c844|542d410e-d03c-4e63-aa72-b6520df4128b",
-          ""
-        ],
-        [
-          "silk_edge_clearance|15240000|80116000|4fc3183f-297c-42b7-b3bd-25a9ea18c844|0b832a58-f83d-46d7-8219-03220e6bbced",
-          ""
-        ],
-        [
-          "silk_edge_clearance|15240000|80116000|4fc3183f-297c-42b7-b3bd-25a9ea18c844|cf03ad8f-66ef-45f9-8345-2635d0d3edd5",
-          ""
-        ],
-        [
-          "silk_edge_clearance|15240000|90616000|4fc3183f-297c-42b7-b3bd-25a9ea18c844|1525535f-a14f-4148-bf1a-2c1a2802f16c",
-          ""
-        ],
-        [
-          "silk_edge_clearance|15240000|95356000|4fc3183f-297c-42b7-b3bd-25a9ea18c844|a523695c-35b4-4859-b781-154824ab5ca9",
-          ""
-        ],
-        [
-          "silk_edge_clearance|15240000|95356000|4fc3183f-297c-42b7-b3bd-25a9ea18c844|b5e21c8b-4f23-470f-94c9-40687ea53ea2",
-          ""
-        ],
-        [
-          "silk_edge_clearance|54720000|105856000|4fc3183f-297c-42b7-b3bd-25a9ea18c844|675cfbd2-e790-4842-b368-f626e1795786",
-          ""
-        ],
-        [
-          "silk_edge_clearance|54720000|110571000|4fc3183f-297c-42b7-b3bd-25a9ea18c844|1427beee-3bac-4761-90c7-1d211b9ad51c",
-          ""
-        ],
-        [
-          "silk_edge_clearance|54720000|110571000|4fc3183f-297c-42b7-b3bd-25a9ea18c844|1e3fd3d5-91a2-4915-bf3d-e5e3d46d180b",
-          ""
-        ],
-        [
-          "silk_edge_clearance|54720000|121071000|4fc3183f-297c-42b7-b3bd-25a9ea18c844|c49cdd63-d196-49a7-b408-7af3848e936c",
-          ""
-        ],
-        [
-          "silk_edge_clearance|54720000|95356000|4fc3183f-297c-42b7-b3bd-25a9ea18c844|22a8e1bc-22fb-4e62-add4-2ae0c07ce05c",
-          ""
-        ],
-        [
-          "silk_edge_clearance|54720000|95356000|4fc3183f-297c-42b7-b3bd-25a9ea18c844|f3749464-3429-4e5d-8e9e-7776a190bf7c",
-          ""
-        ],
-        [
-          "silk_overlap|27420000|88704000|06899cb8-56fb-4440-9d97-ae8b663e7a4c|fa4d256f-b0e6-437a-bae4-869703f5d43c",
-          ""
-        ],
-        [
-          "silk_overlap|27420000|88704000|2f654b4f-9728-444f-8d23-0d66080f4459|fa4d256f-b0e6-437a-bae4-869703f5d43c",
-          ""
-        ],
-        [
-          "silk_overlap|32260000|88704000|5c64632e-a82f-438c-8047-d884b7efb07a|fa4d256f-b0e6-437a-bae4-869703f5d43c",
-          ""
-        ]
-      ],
+      "drc_exclusions": [],
       "meta": {
         "version": 2
       },
@@ -554,7 +473,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "control-board.kicad_pro",
+    "filename": "main-board.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -619,14 +538,163 @@
     },
     "net_colors": null,
     "netclass_assignments": null,
-    "netclass_patterns": []
+    "netclass_patterns": [
+      {
+        "netclass": "PWR",
+        "pattern": "+12VA"
+      },
+      {
+        "netclass": "PWR",
+        "pattern": "+5VA"
+      },
+      {
+        "netclass": "PWR",
+        "pattern": "-12VA"
+      },
+      {
+        "netclass": "PWR",
+        "pattern": "-5VA"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "/CV_NODE"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "/HARD_SYNC"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "/LINFM_IN"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "/LIN_FM"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "/PULSE_OUT"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "/PULSE_RAW"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "/PWM_IN"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "/SAW_OUT"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "/SAW_RAW"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "/SIN_RAW"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "/SOFT_SYNC"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "/TRIANGLE_OUT"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "/TRI_RAW"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "GND"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "Net-(C1-Pad1)"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "Net-(C14-Pad1)"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "Net-(C15-Pad1)"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "Net-(C4-Pad1)"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "Net-(C5-Pad1)"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "Net-(D1-Pad2)"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "Net-(D3-Pad1)"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "Net-(Q1-Pad1)"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "Net-(Q1-Pad2)"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "Net-(R1-Pad1)"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "Net-(R1-Pad2)"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "Net-(R10-Pad1)"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "Net-(R12-Pad2)"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "Net-(R2-Pad2)"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "Net-(R25-Pad2)"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "Net-(R5-Pad1)"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "Net-(R6-Pad1)"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "Net-(RV2-Pad1)"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "Net-(RV7-Pad2)"
+      }
+    ]
   },
   "pcbnew": {
     "last_paths": {
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "../../output/control-board/gerbers-manual/",
+      "plot": "",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",
@@ -742,7 +810,7 @@
       "meta": {
         "version": 0
       },
-      "model_mode": 0,
+      "model_mode": 4,
       "workbook_filename": ""
     },
     "page_layout_descr_file": "",
@@ -760,7 +828,7 @@
   },
   "sheets": [
     [
-      "e63e39d7-6ac0-4ffd-8aa3-1841a4541b55",
+      "b293f12a-36a2-4ab0-9c5b-66dce82335de",
       "Root"
     ]
   ],

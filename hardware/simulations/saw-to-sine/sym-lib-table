@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "spice_symbols")(type "KiCad")(uri "/home/icon0049/dev/hardware/sdiy/cem3340-vco/hardware/shared/spice/spice_symbols.kicad_sym")(options "")(descr ""))
+)
