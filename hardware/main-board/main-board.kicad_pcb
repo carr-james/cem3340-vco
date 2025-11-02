@@ -15398,7 +15398,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -15410,7 +15410,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Generic connector, double row, 02x05, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -15435,7 +15435,7 @@
 				(type solid)
 			)
 			(layer "B.SilkS")
-			(uuid "081bb288-8111-40ba-83e7-17cca517f4da")
+			(uuid "ce7ff974-e440-4042-a6d6-3df7ab4cec20")
 		)
 		(fp_line
 			(start 15.18 -2.98)
@@ -15445,7 +15445,7 @@
 				(type solid)
 			)
 			(layer "B.SilkS")
-			(uuid "07df256d-fc5e-49c3-92bc-a6c581b4f068")
+			(uuid "93782cc3-30b0-4b72-ad5c-844651835ae0")
 		)
 		(fp_line
 			(start 0 -2.98)
@@ -15455,7 +15455,7 @@
 				(type solid)
 			)
 			(layer "B.SilkS")
-			(uuid "f6785074-8623-42c5-8c95-cce7efe301bf")
+			(uuid "56e55245-5e1d-459a-b7be-c93e64760540")
 		)
 		(fp_line
 			(start -5.02 5.52)
@@ -15465,7 +15465,7 @@
 				(type solid)
 			)
 			(layer "B.SilkS")
-			(uuid "5425a975-3fed-4b7f-a434-747104bf178b")
+			(uuid "9a9ec9d7-7a8a-447b-b3e4-14794bca0727")
 		)
 		(fp_line
 			(start -6.245046 4.977655)
@@ -15475,7 +15475,7 @@
 				(type solid)
 			)
 			(layer "B.SilkS")
-			(uuid "3b16334c-065a-4e68-be52-12f0ecbeca92")
+			(uuid "6de60fd0-f147-4f00-91f2-fd0ca27d488c")
 		)
 		(fp_line
 			(start 15.43 5.77)
@@ -15485,7 +15485,7 @@
 				(type solid)
 			)
 			(layer "B.CrtYd")
-			(uuid "d59b1ad9-b73c-4d8a-812d-3c6635fc4620")
+			(uuid "e7b338af-e320-4f59-87a0-20021cc866eb")
 		)
 		(fp_line
 			(start 15.43 -3.23)
@@ -15495,7 +15495,7 @@
 				(type solid)
 			)
 			(layer "B.CrtYd")
-			(uuid "f8f3b012-582c-4976-a7e2-ddfa694a1548")
+			(uuid "8728df77-5e4c-4080-a92c-9fa0d750ab6b")
 		)
 		(fp_line
 			(start -5.27 5.77)
@@ -15505,7 +15505,7 @@
 				(type solid)
 			)
 			(layer "B.CrtYd")
-			(uuid "7adcb5af-c79e-4cf6-a531-80cb492337e0")
+			(uuid "0898816f-9bb3-42bf-b249-ae919d96b71d")
 		)
 		(fp_line
 			(start -5.27 -3.23)
@@ -15515,7 +15515,7 @@
 				(type solid)
 			)
 			(layer "B.CrtYd")
-			(uuid "18dd7d8a-5d52-4503-8789-64dcdb77c1d5")
+			(uuid "d52dbc8e-3689-44a9-a015-0bce78202e76")
 		)
 		(fp_line
 			(start 15.18 5.52)
@@ -15525,7 +15525,7 @@
 				(type solid)
 			)
 			(layer "B.Fab")
-			(uuid "663678ee-2d89-43be-b8fd-e6d2058fdcc1")
+			(uuid "d53366b7-556f-45a1-9eba-702c25d60166")
 		)
 		(fp_line
 			(start 15.18 -2.98)
@@ -15535,7 +15535,7 @@
 				(type solid)
 			)
 			(layer "B.Fab")
-			(uuid "ae467417-e8e1-4747-942b-cfdfd30802ff")
+			(uuid "363d3ba9-7e43-4508-8e41-fdbd5dc00681")
 		)
 		(fp_line
 			(start -5.02 5.52)
@@ -15545,7 +15545,7 @@
 				(type solid)
 			)
 			(layer "B.Fab")
-			(uuid "33fef4d1-9d91-4563-9518-f589e306a903")
+			(uuid "8bdd24c0-ef6c-4a85-89ef-a9206f95bb89")
 		)
 		(fp_line
 			(start -5.02 -2.98)
@@ -15555,7 +15555,7 @@
 				(type solid)
 			)
 			(layer "B.Fab")
-			(uuid "ea653046-38f5-47aa-a2fd-53d0ee97a947")
+			(uuid "24a75f03-fd66-4b9a-941f-28035ab501d6")
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0 0 0)
