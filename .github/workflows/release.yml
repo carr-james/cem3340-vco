@@ -6,6 +6,9 @@ on:
       - 'v*'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   release:
     uses: carr-james/eurorack-workflows/.github/workflows/kicad-release.yml@main
