@@ -16,17 +16,23 @@ jobs:
       project-name: 'CEM3340-VCO'
       boards: |
         [
-          {
-            "name": "control-board",
-            "kibot_config": ".kibot/jlcpcb.kibot.yaml",
-            "pcb_path": "hardware/control-board/control-board.kicad_pcb",
-            "sch_path": "hardware/control-board/control-board.kicad_sch"
-          },
-          {
-            "name": "main-board",
-            "kibot_config": ".kibot/jlcpcb.kibot.yaml",
-            "pcb_path": "hardware/main-board/main-board.kicad_pcb",
-            "sch_path": "hardware/main-board/main-board.kicad_sch"
-          }
+        {
+        "name": "control-board",
+        "kibot_config": ".kibot/jlcpcb.kibot.yaml",
+        "pcb_path": "hardware/control-board/control-board.kicad_pcb",
+        "sch_path": "hardware/control-board/control-board.kicad_sch"
+        },
+        {
+        "name": "middle-board",
+        "kibot_config": ".kibot/jlcpcb-4layer.kibot.yaml",
+        "pcb_path": "hardware/middle-board/middle-board.kicad_pcb",
+        "sch_path": "hardware/middle-board/middle-board.kicad_sch"
+        },
+        {
+        "name": "bottom-board",
+        "kibot_config": ".kibot/jlcpcb-4layer.kibot.yaml",
+        "pcb_path": "hardware/bottom-board/bottom-board.kicad_pcb",
+        "sch_path": "hardware/bottom-board/bottom-board.kicad_sch"
+        }
         ]
       skip-checks: 'erc,drc'
