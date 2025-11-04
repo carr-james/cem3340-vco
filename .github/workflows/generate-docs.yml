@@ -1,0 +1,44 @@
+name: Generate Documentation
+
+on:
+  # Manual trigger
+  workflow_dispatch:
+    inputs:
+      deploy:
+        description: 'Deploy to GitHub Pages'
+        required: false
+        type: boolean
+        default: true
+
+  # Auto-trigger on dev branch pushes
+  push:
+    branches: [ dev ]
+
+  # Optionally run on release
+  # release:
+  #   types: [published]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  generate-docs:
+    uses: carr-james/eurorack-workflows/.github/workflows/generate-docs.yml@main
+    with:
+      # Define boards for this project
+      boards: |
+        [
+          {
+            "name": "control-board",
+            "path": "hardware/control-board"
+          },
+          {
+            "name": "main-board",
+            "path": "hardware/main-board"
+          }
+        ]
+      deploy_to_pages: ${{ github.event_name == 'workflow_dispatch' && inputs.deploy || github.event_name == 'push' || github.event_name == 'release' }}
+      # Use enhanced kibot config (checked out automatically by the workflow)
+      kibot_config: '../../.eurorack-workflows/kibot-configs/jlcpcb-2layer-enhanced.kibot.yaml'

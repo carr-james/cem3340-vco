@@ -1,0 +1,165 @@
+site_name: CEM3340 VCO Module
+site_description: Build guide and technical documentation for CEM3340-based voltage controlled oscillator
+site_author: Your Name
+
+# Repository information
+repo_name: carr-james/cem3340-vco
+repo_url: https://github.com/carr-james/cem3340-vco
+
+# Copyright
+copyright: Copyright &copy; 2024 Your Name
+
+theme:
+  name: material
+
+  # Color scheme
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+  # Features
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+    - toc.follow
+    - toc.integrate
+
+  # Icons
+  icon:
+    repo: fontawesome/brands/github
+    admonition:
+      note: octicons/tag-16
+      abstract: octicons/checklist-16
+      info: octicons/info-16
+      tip: octicons/light-bulb-16
+      success: octicons/check-16
+      question: octicons/question-16
+      warning: octicons/alert-16
+      failure: octicons/x-circle-16
+      danger: octicons/zap-16
+      bug: octicons/bug-16
+      example: octicons/beaker-16
+      quote: octicons/quote-16
+
+# Extensions
+markdown_extensions:
+  # Python Markdown
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      title: On this page
+
+  # Python Markdown Extensions
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Plugins
+plugins:
+  - search:
+      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+      htmlmin_opts:
+        remove_comments: true
+      cache_safe: true
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: timeago
+
+# Extra
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/your-username
+    - icon: fontawesome/brands/youtube
+      link: https://youtube.com/your-channel
+
+  # Analytics (optional)
+  # analytics:
+  #   provider: google
+  #   property: G-XXXXXXXXXX
+
+# Extra CSS
+extra_css:
+  - stylesheets/extra.css
+
+# Page tree
+nav:
+  - Home: index.md
+  - Getting Started:
+    - Overview: overview.md
+    - Bill of Materials: bom.md
+    - Sourcing Parts: sourcing.md
+  - Build Guide:
+    - Assembly Instructions: assembly.md
+    - Soldering Tips: soldering.md
+    - Calibration: calibration.md
+    - Testing: testing.md
+  - Technical Docs:
+    - Schematics: schematics.md
+    - PCB Layout: pcb.md
+    - 3D Renders: renders.md
+  - Troubleshooting:
+    - Common Issues: troubleshooting.md
+    - Debugging: debugging.md
+  - Resources:
+    - Downloads: downloads.md
+    - References: references.md

@@ -1,0 +1,153 @@
+/* Custom CSS for Eurorack Module Documentation */
+
+/* Make images responsive and centered */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1em auto;
+}
+
+/* Style for schematic diagrams */
+img[alt*="Schematic"],
+img[alt*="schematic"] {
+    background-color: white;
+    padding: 1em;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+}
+
+/* Dark mode adjustments for schematics */
+[data-md-color-scheme="slate"] img[alt*="Schematic"],
+[data-md-color-scheme="slate"] img[alt*="schematic"] {
+    background-color: #2d2d2d;
+    border-color: #404040;
+}
+
+/* BOM table styling */
+table {
+    font-size: 0.9em;
+}
+
+table th {
+    background-color: #f5f5f5;
+    font-weight: 600;
+}
+
+[data-md-color-scheme="slate"] table th {
+    background-color: #2d2d2d;
+}
+
+/* Checklist styling */
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item input[type="checkbox"] {
+    margin-right: 0.5em;
+}
+
+/* Assembly steps */
+.md-typeset h3 {
+    margin-top: 2em;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 0.3em;
+}
+
+[data-md-color-scheme="slate"] .md-typeset h3 {
+    border-bottom-color: #404040;
+}
+
+/* Admonition customization */
+.md-typeset .admonition {
+    border-left-width: 4px;
+}
+
+/* Component reference styling */
+code {
+    font-weight: 600;
+}
+
+/* Downloads section */
+.md-button {
+    margin: 0.5em 0.25em;
+}
+
+/* Embedded iframe for iBOM */
+iframe {
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    margin: 1em 0;
+}
+
+[data-md-color-scheme="slate"] iframe {
+    border-color: #404040;
+}
+
+/* Print styles */
+@media print {
+    .md-header,
+    .md-sidebar,
+    .md-footer {
+        display: none;
+    }
+
+    img {
+        max-width: 100%;
+        page-break-inside: avoid;
+    }
+
+    h2, h3 {
+        page-break-after: avoid;
+    }
+}
+
+/* Specification tables */
+table.specs {
+    width: auto;
+    min-width: 400px;
+}
+
+table.specs td:first-child {
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* Gallery grid for multiple images */
+.md-typeset .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1em;
+    margin: 2em 0;
+}
+
+.md-typeset .gallery img {
+    margin: 0;
+}
+
+/* Highlight critical warnings */
+.md-typeset .admonition.danger {
+    border-left-color: #ff1744;
+}
+
+.md-typeset .admonition.danger > .admonition-title {
+    background-color: rgba(255, 23, 68, 0.1);
+}
+
+/* Code blocks for technical specs */
+.md-typeset pre {
+    border-radius: 4px;
+}
+
+/* Component value styling */
+.component-value {
+    font-family: 'Courier New', monospace;
+    background-color: #f5f5f5;
+    padding: 0.1em 0.3em;
+    border-radius: 3px;
+    font-weight: 600;
+}
+
+[data-md-color-scheme="slate"] .component-value {
+    background-color: #2d2d2d;
+}
