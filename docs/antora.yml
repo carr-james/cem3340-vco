@@ -19,7 +19,7 @@ ext:
           schematic_pdf schematic_svg
           pcb_top_pdf board_dimensions
           render_top render_bottom render_perspective
-          bom_html ibom
+          ibom
           step
       scan:
         # Schematics SVG - to images (for inline display)
@@ -62,7 +62,7 @@ ext:
           schematic_pdf schematic_svg
           pcb_top_pdf board_dimensions
           render_top render_bottom render_perspective
-          bom_html ibom
+          ibom
           step
       scan:
         # Schematics SVG - to images (for inline display)

@@ -74,23 +74,6 @@ outputs:
           name: 'LCSC Part #'
           join: []
 
-  - name: bom_html
-    comment: 'HTML Bill of Materials for documentation'
-    type: bom
-    dir: bom
-    options:
-      output: '%f_bom.%x'
-      format: HTML
-      html:
-        title: 'Bill of Materials - %p'
-        highlight_empty: false
-      columns:
-        - References
-        - Value
-        - Footprint
-        - Description
-        - Datasheet
-
   - name: position
     comment: 'Component position file for JLCPCB assembly'
     type: position
@@ -323,7 +306,6 @@ outputs:
         - from_output: render_top
         - from_output: render_bottom
         - from_output: render_perspective
-        - from_output: bom_html
 
 filters:
   - name: 'only_jlc_parts'

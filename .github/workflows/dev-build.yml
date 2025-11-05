@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - dev
+    paths:
+      - 'hardware/**'
+      - '.kibot/**'
+      - '.github/workflows/dev-build.yml'
 
 permissions:
   contents: write
