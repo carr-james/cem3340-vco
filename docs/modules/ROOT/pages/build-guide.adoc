@@ -1,0 +1,34 @@
+= Build Guide
+
+== Assembly Instructions
+
+_Content to be added._
+
+=== Control Board Assembly
+
+_Content to be added._
+
+=== Main Board Assembly
+
+_Content to be added._
+
+== Soldering Tips
+
+_Content to be added._
+
+== Testing
+
+_Content to be added._
+
+== Calibration
+
+_Content to be added._
+
+== Troubleshooting
+
+_Content to be added._
+
+== See Also
+
+* xref:interactive-bom.adoc[Interactive BOM] - Visual assembly guide
+* xref:schematics.adoc[Schematics] - Circuit diagrams

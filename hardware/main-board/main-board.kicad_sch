@@ -4,6 +4,11 @@
 	(generator_version "9.0")
 	(uuid "b293f12a-36a2-4ab0-9c5b-66dce82335de")
 	(paper "A4")
+	(title_block
+		(title "CEM3340 VCO - Main Board")
+		(date "2025-11-05")
+		(rev "v1.0.0")
+	)
 	(lib_symbols
 		(symbol "Amplifier_Operational:TL074"
 			(pin_names

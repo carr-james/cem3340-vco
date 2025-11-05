@@ -1,0 +1,334 @@
+kibot:
+  version: 1
+
+preflight:
+  # Run ERC and DRC checks - builds will fail if errors are found
+  erc: true
+  drc: true
+  check_zone_fills: true
+  # Update XML fields from schematic
+  update_xml: true
+  # Ignore unconnected items that are intentional
+  filters:
+    - filter: 'Ignore unconnected pin warnings for mounting holes'
+      error: 'unconnected'
+      regex: 'MountingHole'
+
+outputs:
+  #
+  # Manufacturing Files for JLCPCB
+  #
+  - name: gerbers
+    comment: 'Gerber files for JLCPCB 2-layer boards'
+    type: gerber
+    dir: gerbers
+    layers:
+      - layer: F.Cu
+        suffix: F_Cu
+      - layer: B.Cu
+        suffix: B_Cu
+      - layer: F.SilkS
+        suffix: F_SilkS
+      - layer: B.SilkS
+        suffix: B_SilkS
+      - layer: F.Mask
+        suffix: F_Mask
+      - layer: B.Mask
+        suffix: B_Mask
+      - layer: Edge.Cuts
+        suffix: Edge_Cuts
+
+  - name: drill
+    comment: 'Excellon drill files (PTH and NPTH separate for JLCPCB)'
+    type: excellon
+    dir: gerbers
+    options:
+      metric_units: true
+      pth_and_npth_single_file: false
+      use_aux_axis_as_origin: false
+      minimal_header: false
+      mirror_y_axis: false
+
+  #
+  # Assembly Files
+  #
+  - name: bom
+    comment: 'Bill of Materials in JLCPCB format'
+    type: bom
+    dir: bom
+    options:
+      output: '%f_bom_jlc.%x'
+      exclude_filter: 'only_jlc_parts'
+      csv:
+        hide_pcb_info: true
+        hide_stats_info: true
+        quote_all: true
+      columns:
+        - field: References
+          name: Designator
+        - field: Value
+          name: Comment
+        - field: Footprint
+          name: Footprint
+        - field: 'LCSC Part'
+          name: 'LCSC Part #'
+          join: []
+
+  - name: bom_html
+    comment: 'HTML Bill of Materials for documentation'
+    type: bom
+    dir: bom
+    options:
+      output: '%f_bom.%x'
+      format: HTML
+      html:
+        title: 'Bill of Materials - %p'
+        highlight_empty: false
+      columns:
+        - References
+        - Value
+        - Footprint
+        - Description
+        - Datasheet
+
+  - name: position
+    comment: 'Component position file for JLCPCB assembly'
+    type: position
+    dir: position
+    options:
+      format: CSV
+      units: millimeters
+      separate_files_for_front_and_back: false
+      only_smd: false
+      output: '%f_cpl_jlc.%x'
+      columns:
+        - id: Ref
+          name: Designator
+        - Val
+        - Package
+        - id: PosX
+          name: "Mid X"
+        - id: PosY
+          name: "Mid Y"
+        - id: Rot
+          name: Rotation
+        - id: Side
+          name: Layer
+
+  - name: ibom
+    comment: 'Interactive HTML BOM for assembly'
+    type: ibom
+    dir: ibom
+    options:
+      dark_mode: true
+      hide_pads: false
+      show_fabrication: false
+      hide_silkscreen: false
+      highlight_pin1: true
+      no_redraw_on_drag: false
+      board_rotation: 0
+      checkboxes: 'Sourced,Placed'
+      extra_fields: "Value,Footprint,Description,Notes,Datasheet,Manufacturer Part,LCSC Part"
+      extra_data_file: "%F.kicad_pcb"
+      bom_view: 'left-right'
+      layer_view: 'FB'
+      name_format: '%p_interactive_bom'
+
+  #
+  # Documentation - Schematics
+  #
+  - name: schematic_pdf
+    comment: 'Schematic in PDF format'
+    type: pdf_sch_print
+    dir: docs/schematics
+    options:
+      output: '%f_schematic.%x'
+      color_theme: '_builtin_default'
+      background_color: true
+      all_pages: true
+      monochrome: false
+
+  - name: schematic_svg
+    comment: 'Schematic in SVG format for web'
+    type: svg_sch_print
+    dir: docs/schematics
+    options:
+      output: '%f_schematic.%x'
+      all_pages: true
+      color_theme: '_builtin_default'
+      background_color: true
+
+  #
+  # Documentation - PCB Views
+  #
+  - name: pcb_top_pdf
+    comment: 'PCB top view fabrication drawing'
+    type: pcb_print
+    dir: docs/pcb
+    options:
+      output: '%f_pcb_fabrication.%x'
+      format: PDF
+      pages:
+        - layers:
+            - layer: F.Cu
+            - layer: F.SilkS
+            - layer: Dwgs.User
+            - layer: Edge.Cuts
+          sheet: 'Top View'
+        - layers:
+            - layer: B.Cu
+            - layer: B.SilkS
+            - layer: Dwgs.User
+            - layer: Edge.Cuts
+          sheet: 'Bottom View'
+          mirror: true
+        - layers:
+            - layer: F.Fab
+            - layer: Dwgs.User
+            - layer: Edge.Cuts
+          sheet: 'Fabrication Layer'
+
+  - name: board_dimensions
+    comment: 'Board dimensions drawing'
+    type: pcb_print
+    dir: docs/pcb
+    options:
+      output: '%f_dimensions.%x'
+      format: SVG
+      pages:
+        - layers:
+            - layer: Edge.Cuts
+            - layer: Dwgs.User
+          sheet: 'Board Outline'
+
+  #
+  # 3D Renders
+  #
+  - name: render_top
+    comment: '3D render from top'
+    type: render_3d
+    dir: docs/renders
+    options:
+      output: '%f_3D_top.%x'
+      ray_tracing: true
+      orthographic: false
+      zoom: 0
+      rotate_x: 0
+      rotate_y: 0
+      rotate_z: 0
+      background1: '#66667F'
+      background2: '#CCCCE5'
+      width: 1920
+      height: 1080
+
+  - name: render_bottom
+    comment: '3D render from bottom'
+    type: render_3d
+    dir: docs/renders
+    options:
+      output: '%f_3D_bottom.%x'
+      ray_tracing: true
+      orthographic: false
+      zoom: 0
+      rotate_x: 0
+      rotate_y: 180
+      rotate_z: 0
+      background1: '#66667F'
+      background2: '#CCCCE5'
+      width: 1920
+      height: 1080
+
+  - name: render_perspective
+    comment: '3D render perspective view'
+    type: render_3d
+    dir: docs/renders
+    options:
+      output: '%f_3D_perspective.%x'
+      ray_tracing: true
+      orthographic: false
+      zoom: 0
+      rotate_x: 30
+      rotate_y: 0
+      rotate_z: -30
+      background1: '#66667F'
+      background2: '#CCCCE5'
+      width: 1920
+      height: 1080
+
+  #
+  # STEP file for mechanical design
+  #
+  - name: step
+    comment: 'STEP 3D model'
+    type: step
+    dir: mechanical
+    options:
+      output: '%f.%x'
+      no_virtual: false
+      min_distance: -1
+      metric_units: true
+      origin: grid
+      download: true
+      kicad_3d_url: 'https://gitlab.com/kicad/libraries/kicad-packages3D/-/raw/master/'
+
+  #
+  # Assembly Documentation
+  #
+  # Note: pcbdraw outputs removed due to missing resources in CI environment
+  # Position CSV and interactive BOM provide assembly guidance
+
+  #
+  # Diff outputs (for comparing versions)
+  #
+  - name: pcb_diff
+    comment: 'PCB visual diff between commits'
+    type: pcb_variant
+    dir: diff
+    options:
+      output: '%f_diff.%x'
+      # This requires git history to compare
+      # Only works in CI/CD with multiple commits
+
+  #
+  # Note: DRC and ERC checks run automatically in preflight section
+  # Reports are generated automatically, no separate output needed
+  #
+
+  #
+  # Zip archives for production
+  #
+  - name: gerbers_zip
+    comment: 'Gerbers and drill files in ZIP for JLCPCB'
+    type: compress
+    dir: production
+    options:
+      output: '%f_gerbers_jlcpcb.%x'
+      format: ZIP
+      files:
+        - from_output: gerbers
+          dest: /
+        - from_output: drill
+          dest: /
+
+  - name: docs_archive
+    comment: 'All documentation in ZIP'
+    type: compress
+    dir: production
+    options:
+      output: '%f_documentation.%x'
+      format: ZIP
+      files:
+        - from_output: schematic_pdf
+        - from_output: pcb_top_pdf
+        - from_output: render_top
+        - from_output: render_bottom
+        - from_output: render_perspective
+        - from_output: bom_html
+
+filters:
+  - name: 'only_jlc_parts'
+    comment: 'Only parts with LCSC part numbers for JLCPCB assembly'
+    type: generic
+    exclude_any:
+      - column: 'LCSC Part'
+        regex: '^$'

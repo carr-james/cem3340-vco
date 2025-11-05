@@ -1,0 +1,32 @@
+= CEM3340 VCO Documentation
+
+Welcome to the CEM3340 VCO project documentation.
+
+== Overview
+
+This is a Eurorack-format voltage-controlled oscillator based on the CEM3340 chip.
+
+_Content to be added._
+
+== Project Structure
+
+This project consists of two boards:
+
+* *Control Board* - Front panel controls and CV inputs
+* *Main Board* - Core oscillator circuitry
+
+== Quick Links
+
+* xref:getting-started.adoc[Getting Started]
+* xref:build-guide.adoc[Build Guide]
+* xref:schematics.adoc[Schematics]
+* xref:interactive-bom.adoc[Interactive BOM]
+* xref:downloads.adoc[Downloads]
+
+== Features
+
+_Content to be added._
+
+== Specifications
+
+_Content to be added._

@@ -1,0 +1,35 @@
+name: Generate Antora Documentation
+
+on:
+  # Manual trigger
+  workflow_dispatch:
+    inputs:
+      deploy:
+        description: 'Deploy to GitHub Pages'
+        required: false
+        type: boolean
+        default: true
+
+  # Auto-trigger on main branch pushes
+  push:
+    branches: [ main ]
+    paths:
+      - 'docs/**'
+      - 'hardware/**'
+      - '.github/workflows/generate-docs.yml'
+
+  # Optionally run on release tags
+  # push:
+  #   tags:
+  #     - 'v*'
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  generate-antora-docs:
+    uses: carr-james/eurorack-workflows/.github/workflows/generate-antora-docs.yml@main
+    with:
+      deploy_to_pages: ${{ github.event_name == 'workflow_dispatch' && inputs.deploy || github.event_name == 'push' }}

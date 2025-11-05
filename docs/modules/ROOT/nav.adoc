@@ -1,0 +1,7 @@
+* xref:index.adoc[Home]
+* xref:getting-started.adoc[Getting Started]
+* xref:build-guide.adoc[Build Guide]
+* Technical Documentation
+** xref:schematics.adoc[Schematics]
+** xref:interactive-bom.adoc[Interactive BOM]
+* xref:downloads.adoc[Downloads]

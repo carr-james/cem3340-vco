@@ -35,3 +35,15 @@ fp-info-cache
 
 output/
 /.idea/
+
+# Local Antora preview (optional)
+build/
+.cache/
+node_modules/
+package-lock.json
+
+# Python virtual environment for KiBot
+.venv/
+
+# KiBot generated output
+hardware/**/kibot-output/

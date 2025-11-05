@@ -1,0 +1,30 @@
+= Interactive Bill of Materials
+
+The Interactive BOM (iBOM) is a powerful tool for assembly. It shows the PCB layout with component locations and allows you to highlight specific components as you place them.
+
+TIP: Use the checkboxes to track your assembly progress. The iBOM will highlight component locations on the board.
+
+== Control Board iBOM
+
+xref:attachment$generated/control-board/ibom/control-board-ibom.html[Open Interactive BOM,window=_blank]
+
+NOTE: The Interactive BOM is best viewed in a separate window for full functionality.
+
+== Main Board iBOM
+
+xref:attachment$generated/main-board/ibom/main-board-ibom.html[Open Interactive BOM,window=_blank]
+
+NOTE: The Interactive BOM is best viewed in a separate window for full functionality.
+
+== How to Use the Interactive BOM
+
+. *Search Components* - Use the search box to find specific components
+. *Filter by Value* - Click on component values to highlight all matching components
+. *Track Progress* - Check off components as you place them
+. *Toggle Layers* - Switch between top and bottom views
+. *Highlight Components* - Click a component in the list to see its location on the board
+
+== See Also
+
+* xref:build-guide.adoc[Build Guide] - Assembly instructions
+* xref:downloads.adoc[Downloads] - Download standalone iBOM files

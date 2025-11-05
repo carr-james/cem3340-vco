@@ -1,0 +1,27 @@
+= Getting Started
+
+== Introduction
+
+_Content to be added._
+
+== Prerequisites
+
+=== Tools Required
+
+_Content to be added._
+
+=== Components
+
+_Content to be added._
+
+== Bill of Materials
+
+_Content to be added._
+
+== Sourcing Parts
+
+_Content to be added._
+
+== Next Steps
+
+Once you have all the components, proceed to the xref:build-guide.adoc[Build Guide].

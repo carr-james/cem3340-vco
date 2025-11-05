@@ -8,31 +8,28 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 jobs:
   release:
-    uses: carr-james/eurorack-workflows/.github/workflows/kicad-release.yml@main
+    uses: carr-james/eurorack-workflows/.github/workflows/kicad-build.yml@main
     with:
-      project-name: 'CEM3340-VCO'
+      project-name: 'CEM 3340 VCO'
+      build-type: 'release'
       boards: |
         [
-        {
-        "name": "control-board",
-        "kibot_config": ".kibot/jlcpcb.kibot.yaml",
-        "pcb_path": "hardware/control-board/control-board.kicad_pcb",
-        "sch_path": "hardware/control-board/control-board.kicad_sch"
-        },
-        {
-        "name": "middle-board",
-        "kibot_config": ".kibot/jlcpcb-4layer.kibot.yaml",
-        "pcb_path": "hardware/middle-board/middle-board.kicad_pcb",
-        "sch_path": "hardware/middle-board/middle-board.kicad_sch"
-        },
-        {
-        "name": "bottom-board",
-        "kibot_config": ".kibot/jlcpcb-4layer.kibot.yaml",
-        "pcb_path": "hardware/bottom-board/bottom-board.kicad_pcb",
-        "sch_path": "hardware/bottom-board/bottom-board.kicad_sch"
-        }
-        ]
+            {
+             "name": "control-board",
+             "kibot_config": ".kibot/jlcpcb.kibot.yaml",
+             "pcb_path": "hardware/control-board/control-board.kicad_pcb",
+             "sch_path": "hardware/control-board/control-board.kicad_sch"
+           },
+           {
+             "name": "main-board",
+             "kibot_config": ".kibot/jlcpcb.kibot.yaml",
+             "pcb_path": "hardware/main-board/main-board.kicad_pcb",
+             "sch_path": "hardware/main-board/main-board.kicad_sch"
+           }
+         ]
       skip-checks: 'erc,drc'
+      include-assembly-files: true

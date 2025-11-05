@@ -1,0 +1,61 @@
+= Downloads
+
+This page provides links to all generated documentation files and manufacturing outputs.
+
+== Documentation Files
+
+=== Control Board
+
+==== Schematics
+
+* link:attachment$generated/control-board/schematics/control-board_schematic.pdf[Schematic PDF,window=_blank]
+
+==== PCB Documentation
+
+* link:attachment$generated/control-board/pcb/control-board_pcb_fabrication.pdf[PCB Fabrication Drawing PDF,window=_blank]
+* link:attachment$generated/control-board/pcb/control-board_dimensions.svg[Board Dimensions SVG,window=_blank]
+
+==== 3D Renders
+
+_Content to be added - links to 3D render images._
+
+==== Interactive BOM
+
+* link:attachment$generated/control-board/ibom/control-board_interactive_bom.html[Interactive BOM HTML,window=_blank]
+
+==== Mechanical Files
+
+* link:attachment$generated/control-board/mechanical/control-board.step[STEP 3D Model,window=_blank]
+
+=== Main Board
+
+==== Schematics
+
+* link:attachment$generated/main-board/schematics/main-board_schematic.pdf[Schematic PDF,window=_blank]
+
+==== PCB Documentation
+
+* link:attachment$generated/main-board/pcb/main-board_pcb_fabrication.pdf[PCB Fabrication Drawing PDF,window=_blank]
+* link:attachment$generated/main-board/pcb/main-board_dimensions.svg[Board Dimensions SVG,window=_blank]
+
+==== 3D Renders
+
+_Content to be added - links to 3D render images._
+
+==== Interactive BOM
+
+* link:attachment$generated/main-board/ibom/main-board_interactive_bom.html[Interactive BOM HTML,window=_blank]
+
+==== Mechanical Files
+
+* link:attachment$generated/main-board/mechanical/main-board.step[STEP 3D Model,window=_blank]
+
+== Manufacturing Files
+
+NOTE: Manufacturing files (Gerbers, drill files, BOM, CPL) are available in the GitHub releases or as build artifacts.
+
+_Content to be added._
+
+== Firmware
+
+_Content to be added (if applicable)._

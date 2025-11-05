@@ -1,0 +1,14 @@
+{
+  "name": "cem3340-vco-local-preview",
+  "version": "1.0.0",
+  "description": "Local Antora preview for CEM3340 VCO documentation",
+  "private": true,
+  "scripts": {
+    "preview": "antora docs/local-site.yml && python3 -m http.server 8000 --directory build/site"
+  },
+  "dependencies": {
+    "@antora/cli": "^3.1.9",
+    "@antora/site-generator": "^3.1.9",
+    "@antora/collector-extension": "^1.0.0-alpha.3"
+  }
+}

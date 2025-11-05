@@ -1,0 +1,43 @@
+= Schematics
+
+This page shows the circuit schematics for both boards. The schematics are automatically generated from the KiCad project files during the documentation build process.
+
+== Control Board Schematic
+
+The control board handles all front panel controls and CV inputs.
+
+_Content to be added._
+
+=== Schematic Diagram
+
+The schematic below is automatically generated from the KiCad project:
+
+[.expandable]
+image::image$generated/control-board/schematics/control-board_schematic.svg[Control Board Schematic,width=100%]
+
+TIP: Click the image to view at full size. You can also xref:attachment$generated/control-board/schematics/control-board_schematic.pdf[download the PDF version].
+
+== Main Board Schematic
+
+The main board contains the core CEM3340 oscillator circuitry.
+
+_Content to be added._
+
+=== Schematic Diagram
+
+[.expandable]
+image::image$generated/main-board/schematics/main-board_schematic.svg[Main Board Schematic,width=100%]
+
+== Circuit Description
+
+=== Control Board
+
+_Content to be added._
+
+=== Main Board
+
+_Content to be added._
+
+== Design Notes
+
+_Content to be added._

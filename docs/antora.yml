@@ -1,0 +1,95 @@
+name: cem3340-vco
+title: CEM3340 VCO
+version: dev
+prerelease: true
+display_version: Development
+nav:
+  - modules/ROOT/nav.adoc
+
+ext:
+  collector:
+    # Generate documentation artifacts for control-board
+    - run:
+        command: >
+          kibot
+          -c .kibot/jlcpcb-2layer-enhanced.kibot.yaml
+          -b hardware/control-board/control-board.kicad_pcb
+          -e hardware/control-board/control-board.kicad_sch
+          -d hardware/control-board/kibot-output
+          schematic_pdf schematic_svg
+          pcb_top_pdf board_dimensions
+          render_top render_bottom render_perspective
+          bom_html ibom
+          step
+      scan:
+        # Schematics SVG - to images (for inline display)
+        - dir: hardware/control-board/kibot-output/docs/schematics
+          files: '**/*.svg'
+          into: modules/ROOT/images/generated/control-board/schematics
+        # Schematics PDF - to attachments (for download)
+        - dir: hardware/control-board/kibot-output/docs/schematics
+          files: '**/*.pdf'
+          into: modules/ROOT/attachments/generated/control-board/schematics
+        # PCB SVG - to images (for inline display)
+        - dir: hardware/control-board/kibot-output/docs/pcb
+          files: '**/*.svg'
+          into: modules/ROOT/images/generated/control-board/pcb
+        # PCB PDF - to attachments (for download)
+        - dir: hardware/control-board/kibot-output/docs/pcb
+          files: '**/*.pdf'
+          into: modules/ROOT/attachments/generated/control-board/pcb
+        # 3D renders - to images (for inline display)
+        - dir: hardware/control-board/kibot-output/docs/renders
+          files: '**/*.{png,jpg}'
+          into: modules/ROOT/images/generated/control-board/renders
+        # Interactive BOM - to attachments (downloadable HTML)
+        - dir: hardware/control-board/kibot-output/ibom
+          files: '**/*.html'
+          into: modules/ROOT/attachments/generated/control-board/ibom
+        # STEP files - to attachments (downloadable)
+        - dir: hardware/control-board/kibot-output/mechanical
+          files: '**/*.step'
+          into: modules/ROOT/attachments/generated/control-board/mechanical
+
+    # Generate documentation artifacts for main-board
+    - run:
+        command: >
+          kibot
+          -c .kibot/jlcpcb-2layer-enhanced.kibot.yaml
+          -b hardware/main-board/main-board.kicad_pcb
+          -e hardware/main-board/main-board.kicad_sch
+          -d hardware/main-board/kibot-output
+          schematic_pdf schematic_svg
+          pcb_top_pdf board_dimensions
+          render_top render_bottom render_perspective
+          bom_html ibom
+          step
+      scan:
+        # Schematics SVG - to images (for inline display)
+        - dir: hardware/main-board/kibot-output/docs/schematics
+          files: '**/*.svg'
+          into: modules/ROOT/images/generated/main-board/schematics
+        # Schematics PDF - to attachments (for download)
+        - dir: hardware/main-board/kibot-output/docs/schematics
+          files: '**/*.pdf'
+          into: modules/ROOT/attachments/generated/main-board/schematics
+        # PCB SVG - to images (for inline display)
+        - dir: hardware/main-board/kibot-output/docs/pcb
+          files: '**/*.svg'
+          into: modules/ROOT/images/generated/main-board/pcb
+        # PCB PDF - to attachments (for download)
+        - dir: hardware/main-board/kibot-output/docs/pcb
+          files: '**/*.pdf'
+          into: modules/ROOT/attachments/generated/main-board/pcb
+        # 3D renders - to images (for inline display)
+        - dir: hardware/main-board/kibot-output/docs/renders
+          files: '**/*.{png,jpg}'
+          into: modules/ROOT/images/generated/main-board/renders
+        # Interactive BOM - to attachments (downloadable HTML)
+        - dir: hardware/main-board/kibot-output/ibom
+          files: '**/*.html'
+          into: modules/ROOT/attachments/generated/main-board/ibom
+        # STEP files - to attachments (downloadable)
+        - dir: hardware/main-board/kibot-output/mechanical
+          files: '**/*.step'
+          into: modules/ROOT/attachments/generated/main-board/mechanical
