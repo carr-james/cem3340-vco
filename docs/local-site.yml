@@ -17,7 +17,7 @@ content:
 
 ui:
   bundle:
-    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+    url: https://github.com/carr-james/eurorack-docs-ui/releases/download/latest/ui-bundle.zip
     snapshot: true
   supplemental_files:
     - path: .nojekyll
@@ -99,9 +99,14 @@ urls:
   latest_version_segment: stable
   latest_version_segment_strategy: redirect:to
 
+asciidoc:
+  extensions:
+    - '@carr-james/eurorack-docs-ui/extensions/ibom-block-antora'
+
 antora:
   extensions:
     - '@antora/collector-extension'
+    - '@carr-james/eurorack-docs-ui/extensions/ibom-processor'
 
 runtime:
   fetch: false

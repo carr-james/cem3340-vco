@@ -4,4 +4,6 @@
 * Technical Documentation
 ** xref:schematics.adoc[Schematics]
 ** xref:interactive-bom.adoc[Interactive BOM]
+*** xref:control-board-ibom.adoc[Control Board]
+*** xref:main-board-ibom.adoc[Main Board]
 * xref:downloads.adoc[Downloads]

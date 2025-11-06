@@ -6,15 +6,11 @@ TIP: Use the checkboxes to track your assembly progress. The iBOM will highlight
 
 == Control Board iBOM
 
-xref:attachment$generated/control-board/ibom/control-board-ibom.html[Open Interactive BOM,window=_blank]
-
-NOTE: The Interactive BOM is best viewed in a separate window for full functionality.
+xref:control-board-ibom.adoc[View Control Board Interactive BOM]
 
 == Main Board iBOM
 
-xref:attachment$generated/main-board/ibom/main-board-ibom.html[Open Interactive BOM,window=_blank]
-
-NOTE: The Interactive BOM is best viewed in a separate window for full functionality.
+xref:main-board-ibom.adoc[View Main Board Interactive BOM]
 
 == How to Use the Interactive BOM
 

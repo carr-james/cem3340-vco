@@ -1,0 +1,4 @@
+= Control Board Interactive BOM
+:page-layout: ibom
+
+ibom::_attachments/generated/control-board/ibom/control-board-ibom.html[]

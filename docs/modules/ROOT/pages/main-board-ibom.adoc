@@ -1,0 +1,4 @@
+= Main Board Interactive BOM
+:page-layout: ibom
+
+ibom::_attachments/generated/main-board/ibom/main-board-ibom.html[]
