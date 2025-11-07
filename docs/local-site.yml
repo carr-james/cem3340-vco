@@ -105,9 +105,12 @@ asciidoc:
 
 antora:
   extensions:
+    - '@carr-james/eurorack-docs-ui/extensions/collector-cache-extension'
     - '@antora/collector-extension'
     - '@carr-james/eurorack-docs-ui/extensions/ibom-processor'
 
 runtime:
   fetch: false
   cache_dir: ./.cache/antora
+  log:
+    level: info

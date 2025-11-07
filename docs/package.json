@@ -10,6 +10,6 @@
     "@antora/cli": "^3.1.9",
     "@antora/site-generator": "^3.1.9",
     "@antora/collector-extension": "^1.0.0-alpha.3",
-    "@carr-james/eurorack-docs-ui": "^1.0.0"
+    "@carr-james/eurorack-docs-ui": "^1.2.0"
   }
 }

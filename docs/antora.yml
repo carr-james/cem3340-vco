@@ -7,9 +7,14 @@ nav:
   - modules/ROOT/nav.adoc
 
 ext:
-  collector:
+  collector-cache:
     # Generate documentation artifacts for control-board
     - run:
+        key: control-board
+        sources:
+          - hardware/control-board/control-board.kicad_pcb
+          - hardware/control-board/control-board.kicad_sch
+        cache-dir: hardware/control-board/kibot-output
         command: >
           kibot
           -c .kibot/jlcpcb-2layer-enhanced.kibot.yaml
@@ -53,6 +58,11 @@ ext:
 
     # Generate documentation artifacts for main-board
     - run:
+        key: main-board
+        sources:
+          - hardware/main-board/main-board.kicad_pcb
+          - hardware/main-board/main-board.kicad_sch
+        cache-dir: hardware/main-board/kibot-output
         command: >
           kibot
           -c .kibot/jlcpcb-2layer-enhanced.kibot.yaml
