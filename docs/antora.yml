@@ -6,6 +6,11 @@ display_version: Development
 nav:
   - modules/ROOT/nav.adoc
 
+asciidoc:
+  attributes:
+    module-status: tested
+    module-status-note: 'PCBs have been tested and work correctly. Documentation and front panel design are still in progress.'
+
 ext:
   collector-cache:
     # Generate documentation artifacts for control-board

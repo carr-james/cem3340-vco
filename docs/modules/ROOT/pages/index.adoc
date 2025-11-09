@@ -1,5 +1,14 @@
 = CEM3340 VCO Documentation
 
+ifdef::show-wip-warnings[]
+[WARNING]
+====
+**Development Status: {module-status}**
+
+{module-status-note}
+====
+endif::[]
+
 Welcome to the CEM3340 VCO project documentation.
 
 == Overview
