@@ -576,7 +576,7 @@ def setup_render_settings(scene, args):
 
 
 def setup_animation(scene, pcb_objects, scene_center, args):
-    """Set up rotation animation by rotating the board stack around Y-axis using a parent empty."""
+    """Set up rotation animation by rotating the board stack around Z-axis (merry-go-round style) using a parent empty."""
     import math
     import bpy
     from mathutils import Euler
@@ -586,22 +586,110 @@ def setup_animation(scene, pcb_objects, scene_center, args):
     pivot = bpy.context.active_object
     pivot.name = "RotationPivot"
 
-    # Parent all PCB objects to the pivot
-    for obj in pcb_objects:
-        obj.parent = pivot
-        # Keep the transform - objects stay in place visually but are now relative to pivot
-        obj.matrix_parent_inverse = pivot.matrix_world.inverted()
+    # Important: Update the scene so the pivot's world matrix is current
+    bpy.context.view_layer.update()
 
-    # Animate the pivot rotation around Y-axis
+    # Collect all objects to parent (everything except camera, lights, and the pivot itself)
+    objects_to_parent = []
+    for obj in scene.objects:
+        if obj != pivot and obj.type not in ['CAMERA', 'LIGHT']:
+            objects_to_parent.append(obj)
+
+    print(f"  Parenting {len(objects_to_parent)} objects to pivot (preserving transforms)")
+
+    # Parent all objects to the pivot at once using batch operation
+    bpy.ops.object.select_all(action='DESELECT')
+    for obj in objects_to_parent:
+        obj.select_set(True)
+    pivot.select_set(True)
+    bpy.context.view_layer.objects.active = pivot
+
+    # Use the parent operator with keep transform option
+    bpy.ops.object.parent_set(type='OBJECT', keep_transform=True)
+
+    # Deselect all after parenting
+    bpy.ops.object.select_all(action='DESELECT')
+
+    # Apply carousel tilt to pivot (boards standing upright)
+    # This tilts the entire rig, preserving board offsets
+    # Boards were rotated 180° Z before parenting, now flip the whole group right-side-up
+    pivot.rotation_euler.x = math.radians(95)
+    pivot.rotation_euler.y = math.radians(180)
+    pivot.rotation_euler.z = math.radians(0)
+    print(f"  Tilted pivot to carousel angle (77.5° X, 180° Z to flip right-side-up)")
+
+    # Update scene after tilt
+    bpy.context.view_layer.update()
+
+    # Recalculate scene bounds with tilted configuration
+    from mathutils import Vector
+    min_coords = Vector()
+    max_coords = Vector()
+    first = True
+    for obj in scene.objects:
+        if obj.type == 'MESH':
+            for v in obj.data.vertices:
+                world_v = obj.matrix_world @ v.co
+                if first:
+                    min_coords = world_v.copy()
+                    max_coords = world_v.copy()
+                    first = False
+                else:
+                    min_coords.x = min(min_coords.x, world_v.x)
+                    min_coords.y = min(min_coords.y, world_v.y)
+                    min_coords.z = min(min_coords.z, world_v.z)
+                    max_coords.x = max(max_coords.x, world_v.x)
+                    max_coords.y = max(max_coords.y, world_v.y)
+                    max_coords.z = max(max_coords.z, world_v.z)
+
+    scene_center = (min_coords + max_coords) / 2
+    scene_size = max_coords - min_coords
+
+    # Reposition camera for tilted configuration
+    print(f"  Repositioning camera for tilted boards...")
+    camera = scene.camera
+
+    # Calculate proper distance using bounding sphere and FOV
+    # Always use horizontal FOV to ensure zoom is independent of output resolution
+    bounding_radius = math.sqrt(scene_size.x**2 + scene_size.y**2 + scene_size.z**2) / 2
+    sensor_width = camera.data.sensor_width  # Default is 36mm for standard camera
+    fov_horizontal = 2 * math.atan(sensor_width / (2 * camera.data.lens))
+
+    # Calculate distance with padding
+    padding = 1.3
+    distance = (bounding_radius * padding) / math.tan(fov_horizontal / 2)
+
+    # Apply distance multiplier from args
+    distance *= args.camera_distance_multiplier
+
+    print(f"  Camera distance: {distance:.2f} (radius={bounding_radius:.2f}, fov={math.degrees(fov_horizontal):.1f}°)")
+
+    # Position camera at 45° angles
+    angle_x_rad = math.radians(45)
+    angle_z_rad = math.radians(-45)
+    cam_x = distance * math.cos(angle_z_rad)
+    cam_y = -distance * math.sin(angle_z_rad)
+    cam_z = distance * 0.5
+
+    camera.location = scene_center + Vector((cam_x, cam_y, cam_z))
+
+    # Point camera at scene center
+    direction = scene_center - camera.location
+    rot_quat = direction.to_track_quat('-Z', 'Y')
+    camera.rotation_euler = rot_quat.to_euler()
+
+    # Animate the pivot rotation around Z-axis (vertical - carousel style)
+    # The X tilt is constant, Z rotation animates around it
     for frame in range(1, args.frames + 1):
         # Calculate rotation angle for this frame (full 360° rotation)
-        angle = (frame - 1) / args.frames * 2 * math.pi
+        angle = (frame + 1) / args.frames * 2 * math.pi
 
-        # Set pivot rotation
-        pivot.rotation_euler.y = angle
+        # Set pivot rotation around Z-axis (vertical axis)
+        # X rotation stays at 77.5°, only Z changes
+        pivot.rotation_euler.z = angle
 
-        # Insert keyframe for pivot
-        pivot.keyframe_insert(data_path="rotation_euler", index=1, frame=frame)
+        # Insert keyframe for pivot (Z rotation only, X stays constant)
+        pivot.keyframe_insert(data_path="rotation_euler", index=2, frame=frame)
 
 
 def main():
@@ -624,11 +712,13 @@ def main():
 
     # Import all boards with their offsets
     pcb_objects = []
+    board_objects_map = {}  # Maps board index to list of ALL objects imported for that board
     for i, board_path in enumerate(args.board):
         scaled_offset = args.board_offset[i] * args.scale_factor
         print(f"\nImporting board {i+1} (Z-offset: {args.board_offset[i]}mm real = {scaled_offset:.3f}mm scene)...")
         before_count = len(bpy.context.scene.objects)
         board_objs = import_pcb3d(board_path, z_offset=scaled_offset)
+        board_objects_map[i] = board_objs  # Store all imported objects for this board
         after_count = len(bpy.context.scene.objects)
         print(f"  Scene grew from {before_count} to {after_count} objects ({after_count - before_count} added)")
 
@@ -636,6 +726,8 @@ def main():
     import math
 
     # First pass: collect all PCB objects and match them to boards
+    # Always apply initial 180° rotation BEFORE any shifts (needed for consistent coordinate system)
+    # This is required for XY shifts to work correctly
     board_pcb_map = {}  # Maps board index to PCB object
     for obj in bpy.context.scene.objects:
         if 'PCB_' in obj.name:
@@ -646,35 +738,45 @@ def main():
                 board_name = Path(board_path).stem
                 if board_name in obj.name:
                     board_pcb_map[i] = obj
-                    # Rotate 180° around Z-axis for better viewing angle
+                    # Always rotate 180° around Z-axis for consistent coordinate system
+                    # This ensures XY shifts work the same for both image and video rendering
                     obj.rotation_euler.z = math.radians(180)
                     break
 
-    print(f"  Rotated all boards 180° around Z-axis")
+    print(f"  Rotated all boards 180° around Z-axis for consistent coordinate system")
     bpy.context.view_layer.update()
 
     # Second pass: align Y positions to first board, then apply XY shifts
-    if len(board_pcb_map) > 1:
-        # Use first board as reference for Y alignment
-        first_pcb = board_pcb_map[0]
-        reference_y = first_pcb.location.y
-        print(f"\nAligning boards to first board's Y position: {reference_y:.4f}")
+    # Apply to ALL objects imported for each board, not just the PCB_ object
+    if len(board_objects_map) > 1:
+        # Use first board's first object as reference for Y alignment
+        first_board_objs = board_objects_map[0]
+        if first_board_objs:
+            reference_y = first_board_objs[0].location.y
+            print(f"\nAligning boards to first board's Y position: {reference_y:.4f}")
 
-        for i in range(1, len(args.board)):
-            if i in board_pcb_map:
-                pcb = board_pcb_map[i]
-                old_y = pcb.location.y
-                # First align Y to reference
-                pcb.location.y = reference_y
-                print(f"  Board {i+1} Y: {old_y:.4f} -> {reference_y:.4f} (delta: {reference_y - old_y:.4f})")
+            for i in range(1, len(args.board)):
+                if i in board_objects_map:
+                    board_objs = board_objects_map[i]
+                    if board_objs:
+                        old_y = board_objs[0].location.y
+                        y_delta = reference_y - old_y
 
-                # Then apply any XY shifts
-                if args.board_shift_x[i] != 0 or args.board_shift_y[i] != 0:
-                    scaled_shift_x = args.board_shift_x[i] * args.scale_factor
-                    scaled_shift_y = args.board_shift_y[i] * args.scale_factor
-                    pcb.location.x += scaled_shift_x
-                    pcb.location.y += scaled_shift_y
-                    print(f"  Applied XY shift: ({args.board_shift_x[i]}, {args.board_shift_y[i]})mm")
+                        # Apply Y alignment and XY shifts to ALL objects for this board
+                        for obj in board_objs:
+                            # First align Y to reference
+                            obj.location.y += y_delta
+
+                            # Then apply any XY shifts
+                            if args.board_shift_x[i] != 0 or args.board_shift_y[i] != 0:
+                                scaled_shift_x = args.board_shift_x[i] * args.scale_factor
+                                scaled_shift_y = args.board_shift_y[i] * args.scale_factor
+                                obj.location.x += scaled_shift_x
+                                obj.location.y += scaled_shift_y
+
+                        print(f"  Board {i+1}: Y aligned by {y_delta:.4f}, applied to {len(board_objs)} objects")
+                        if args.board_shift_x[i] != 0 or args.board_shift_y[i] != 0:
+                            print(f"    XY shift: ({args.board_shift_x[i]}, {args.board_shift_y[i]})mm")
 
     bpy.context.view_layer.update()
 
@@ -710,9 +812,17 @@ def main():
     print(f"Setting up camera ({camera_view} view, {projection_type}) and lights...")
 
     # Apply board rotation FIRST to achieve different views
+    # For animations: apply a carousel-friendly orientation (boards standing upright)
+    # For stills: apply the requested view rotation
     camera, board_rotation = setup_camera(scene_center, scene_size, view_type=camera_view, distance_multiplier=args.camera_distance_multiplier)
 
-    if board_rotation:
+    if args.animate:
+        # For animations: don't rotate individual boards - rotation will be applied to the pivot
+        # This preserves board offsets. The pivot will be tilted in setup_animation()
+        print(f"  Boards will be tilted via animation pivot (preserves offsets)...")
+        pass
+    elif board_rotation:
+        # For still images: apply the requested view rotation
         print(f"  Applying board rotation for {camera_view} view...")
         for obj in pcb_objects:
             obj.rotation_euler = board_rotation

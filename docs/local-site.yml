@@ -17,7 +17,7 @@ content:
 
 ui:
   bundle:
-    url: https://github.com/carr-james/eurorack-docs-ui/releases/download/latest/ui-bundle.zip
+    url: https://github.com/carr-james/eurorack-docs-ui/releases/download/v1.6.0/ui-bundle.zip
     snapshot: true
 
 urls:

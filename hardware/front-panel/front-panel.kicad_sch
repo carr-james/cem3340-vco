@@ -1,0 +1,2157 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "afe6cfa3-2c58-4d63-b8e6-db021e5bde30")
+	(paper "A4")
+	(lib_symbols
+		(symbol "Device:R_Potentiometer"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "RV"
+				(at -4.445 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R_Potentiometer"
+				(at -2.54 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Potentiometer"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "resistor variable"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Potentiometer*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "R_Potentiometer_0_1"
+				(rectangle
+					(start 1.016 2.54)
+					(end -1.016 -2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.143 0) (xy 2.286 0.508) (xy 2.286 -0.508) (xy 1.143 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 0) (xy 1.524 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_Potentiometer_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 1.27)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Eurorack Common:AudioJack2_SwitchT"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J3"
+				(at 0 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "JACK_2P"
+				(at -0.635 4.9729 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "audio jack receptacle mono headphones phone TS connector"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "AudioJack2_SwitchT_0_1"
+				(rectangle
+					(start -2.54 0)
+					(end -3.81 -2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0.635 -0.635) (xy 1.27 0) (xy 2.54 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.778 -0.254) (xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 2.54 3.81)
+					(end -2.54 -5.08)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 2.54) (xy -0.635 2.54) (xy -0.635 0) (xy -1.27 -0.635) (xy -1.905 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -2.54) (xy 1.778 -2.54) (xy 1.778 -0.254) (xy 1.524 -0.762)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "AudioJack2_SwitchT_1_1"
+				(pin passive line
+					(at 5.08 2.54 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "T"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -2.54 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "TN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Switch:SW_SPDT"
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "SW"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "SW_SPDT"
+				(at 0 -5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 -7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Switch, single pole double throw"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "switch single-pole double-throw spdt ON-ON"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "SW_SPDT_0_1"
+				(circle
+					(center -2.032 0)
+					(radius 0.4572)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.651 0.254) (xy 1.651 2.286)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 2.54)
+					(radius 0.4572)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 -2.54)
+					(radius 0.4572)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "SW_SPDT_1_1"
+				(rectangle
+					(start -3.175 3.81)
+					(end 3.175 -3.81)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 2.54 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -2.54 180)
+					(length 2.54)
+					(name "C"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(text "Sync"
+		(exclude_from_sim no)
+		(at 24.13 137.16 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "13a949c6-874e-47fc-98b3-7d7a262ae0d1")
+	)
+	(text "Sine"
+		(exclude_from_sim no)
+		(at 233.68 62.23 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1672562a-8b84-4446-8b82-16f9132b676d")
+	)
+	(text "Lin FM"
+		(exclude_from_sim no)
+		(at 24.13 160.02 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "31836743-5da0-4210-b815-8ce9cf4363a5")
+	)
+	(text "V/Oct\n"
+		(exclude_from_sim no)
+		(at 24.13 76.2 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3dbbdffa-5d87-4eec-9409-c9e61f47ffdb")
+	)
+	(text "Pulse"
+		(exclude_from_sim no)
+		(at 237.49 132.08 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "42902bfc-7d26-4e58-85f2-184537460deb")
+	)
+	(text "Saw"
+		(exclude_from_sim no)
+		(at 236.22 109.22 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "6888b1a9-8dde-4b50-b381-23a5cbb2ecdf")
+	)
+	(text "Fine tune"
+		(exclude_from_sim no)
+		(at 27.94 55.88 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "96782a21-cc2b-4572-a063-a7de24682b85")
+	)
+	(text "Triangle"
+		(exclude_from_sim no)
+		(at 232.41 86.36 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9b711fb5-63bf-4f67-af14-166d8c42492e")
+	)
+	(text "V/Oct\n"
+		(exclude_from_sim no)
+		(at 24.13 91.44 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9bfebe85-ef76-455f-9707-a02252c2052f")
+	)
+	(text "Frequency"
+		(exclude_from_sim no)
+		(at 27.94 38.1 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ece9a2f6-1859-4eb2-91bc-2d1d3d020c7d")
+	)
+	(text "PWM"
+		(exclude_from_sim no)
+		(at 24.13 118.11 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f4d33824-3ced-4de2-9e51-f4bf9baa0111")
+	)
+	(no_connect
+		(at 43.18 49.53)
+		(uuid "01f55759-1878-4adf-86c4-2fc01f507aa0")
+	)
+	(no_connect
+		(at 218.44 139.7)
+		(uuid "05bd66bb-b3b3-45e3-aebd-758534eb23a3")
+	)
+	(no_connect
+		(at 40.64 137.16)
+		(uuid "062462a9-3ef5-4699-b1e0-fb71fa588810")
+	)
+	(no_connect
+		(at 43.18 86.36)
+		(uuid "0efda0dd-b799-4800-8b64-4c83f581e529")
+	)
+	(no_connect
+		(at 40.64 76.2)
+		(uuid "15201c9f-0d3c-4b72-880e-3de2eb8962cf")
+	)
+	(no_connect
+		(at 48.26 55.88)
+		(uuid "1be7d79a-21ed-4977-aec3-ec6df165b5c9")
+	)
+	(no_connect
+		(at 48.26 157.48)
+		(uuid "2667efd4-567c-44d4-88a0-74620893722a")
+	)
+	(no_connect
+		(at 40.64 160.02)
+		(uuid "3512b82b-8bf6-42c9-b7ae-56ba66a61700")
+	)
+	(no_connect
+		(at 50.8 115.57)
+		(uuid "35e35a12-0f0a-4e7b-95bb-d6021015a38a")
+	)
+	(no_connect
+		(at 231.14 72.39)
+		(uuid "46d7af08-9bd0-4db7-8293-14ec344dafef")
+	)
+	(no_connect
+		(at 40.64 91.44)
+		(uuid "479baffd-dcb6-408b-88c1-291db46ff1f5")
+	)
+	(no_connect
+		(at 218.44 93.98)
+		(uuid "5be603f6-b3ee-4361-b935-f904bb921890")
+	)
+	(no_connect
+		(at 40.64 132.08)
+		(uuid "6bcb3ee5-7fe6-41cc-92b4-5a37ee8fa491")
+	)
+	(no_connect
+		(at 229.87 142.24)
+		(uuid "6e63b0e8-4702-43b4-9719-cb8982017b8b")
+	)
+	(no_connect
+		(at 229.87 119.38)
+		(uuid "6f708571-c3d5-4792-b3c4-9f09a230c6eb")
+	)
+	(no_connect
+		(at 48.26 73.66)
+		(uuid "76b057e8-d30e-4ab5-9ff8-7f654fba5a38")
+	)
+	(no_connect
+		(at 229.87 96.52)
+		(uuid "7d10dec0-8cf8-4aa1-bfbe-37e5d8901f36")
+	)
+	(no_connect
+		(at 71.12 128.27)
+		(uuid "7d7fcd3a-f9cf-4afd-8611-5d13954f9a40")
+	)
+	(no_connect
+		(at 40.64 118.11)
+		(uuid "9078b92e-dd18-483c-8848-7e366aa44af3")
+	)
+	(no_connect
+		(at 229.87 91.44)
+		(uuid "93d4e04f-04b5-43a6-b252-743e4260b566")
+	)
+	(no_connect
+		(at 71.12 140.97)
+		(uuid "99ac37a8-0b2a-4572-b3a5-3fe13bec1b75")
+	)
+	(no_connect
+		(at 48.26 134.62)
+		(uuid "ae47ad23-1c5f-4fa6-b30b-9f466290961f")
+	)
+	(no_connect
+		(at 43.18 59.69)
+		(uuid "af934c7e-2b0f-4a41-b19c-69e776b616d5")
+	)
+	(no_connect
+		(at 43.18 40.64)
+		(uuid "ba182350-d8ce-428e-aff1-c440154b198a")
+	)
+	(no_connect
+		(at 218.44 116.84)
+		(uuid "c17ae3ce-94da-4563-9231-3150948029ca")
+	)
+	(no_connect
+		(at 231.14 67.31)
+		(uuid "c1f9bc63-372c-49fe-b66e-53973e126855")
+	)
+	(no_connect
+		(at 43.18 31.75)
+		(uuid "c657c567-a874-45bd-b92f-691dc7e5094a")
+	)
+	(no_connect
+		(at 229.87 114.3)
+		(uuid "ccff65e5-5d6f-4485-a8fc-14eb5ee74e16")
+	)
+	(no_connect
+		(at 55.88 134.62)
+		(uuid "cd57cece-e2bb-4e0f-a495-384b84e37f1b")
+	)
+	(no_connect
+		(at 218.44 69.85)
+		(uuid "d2835680-e21b-4f73-9dae-a474057ffdcc")
+	)
+	(no_connect
+		(at 58.42 107.95)
+		(uuid "d99cfff0-2388-4fde-b6e8-dae5d5736865")
+	)
+	(no_connect
+		(at 58.42 115.57)
+		(uuid "e394f044-b852-4a87-9efa-55b1973e6fdd")
+	)
+	(no_connect
+		(at 40.64 154.94)
+		(uuid "e5e817e7-fb21-4e68-98cd-501eb9e869ba")
+	)
+	(no_connect
+		(at 229.87 137.16)
+		(uuid "e88aa180-b44d-45e1-af89-ab7b10864687")
+	)
+	(no_connect
+		(at 48.26 36.83)
+		(uuid "eef2f94d-f4f3-42cb-b396-2bf056deccc1")
+	)
+	(no_connect
+		(at 43.18 71.12)
+		(uuid "f100701a-d6b5-4ea7-b6fe-255e901dd2f5")
+	)
+	(no_connect
+		(at 48.26 88.9)
+		(uuid "f163e63d-9c42-404f-badc-7ff8f829e70b")
+	)
+	(no_connect
+		(at 40.64 113.03)
+		(uuid "f3455ee2-fcfa-44c7-bf92-7ff9e5d54158")
+	)
+	(wire
+		(pts
+			(xy 43.18 52.07) (xy 43.18 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "12ca6dfb-f585-4cc4-b816-c38705fddf5f")
+	)
+	(wire
+		(pts
+			(xy 62.23 111.76) (xy 78.74 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1df0ba62-35e9-4f26-8a97-1a1952a61c9d")
+	)
+	(wire
+		(pts
+			(xy 40.64 88.9) (xy 48.26 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "232b0ed7-7c7d-49b2-a945-1d17ae77350d")
+	)
+	(wire
+		(pts
+			(xy 46.99 36.83) (xy 48.26 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "23abe259-8d6a-48b5-bd6a-97b942f9ae38")
+	)
+	(wire
+		(pts
+			(xy 40.64 115.57) (xy 50.8 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3ef05a29-77ea-4253-b337-d78f42918e31")
+	)
+	(wire
+		(pts
+			(xy 218.44 69.85) (xy 231.14 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "59dafe5e-ceab-4b74-b1cf-479da48e3c57")
+	)
+	(wire
+		(pts
+			(xy 40.64 86.36) (xy 43.18 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "62b5055d-0b1f-481c-b9b8-bd3a83e665b5")
+	)
+	(wire
+		(pts
+			(xy 43.18 31.75) (xy 43.18 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6ce1bdac-b882-4461-b20a-b62eec10d52c")
+	)
+	(wire
+		(pts
+			(xy 40.64 157.48) (xy 48.26 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7061920d-edc1-47ff-9bd6-9fa53412c7e1")
+	)
+	(wire
+		(pts
+			(xy 40.64 134.62) (xy 48.26 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8b2c5c50-ae10-4757-aa80-cc9db8751954")
+	)
+	(wire
+		(pts
+			(xy 66.04 128.27) (xy 66.04 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "90181c2a-b379-4521-807d-31026d6a0897")
+	)
+	(wire
+		(pts
+			(xy 218.44 116.84) (xy 229.87 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9915eeb0-ac4e-480d-884e-cffa9d876cbe")
+	)
+	(wire
+		(pts
+			(xy 218.44 93.98) (xy 229.87 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9b5d1117-0689-49ec-b989-40956127b21e")
+	)
+	(wire
+		(pts
+			(xy 218.44 139.7) (xy 229.87 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d106b568-8bc8-42fa-9fcb-c56319e15660")
+	)
+	(wire
+		(pts
+			(xy 40.64 71.12) (xy 43.18 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d445d210-5eba-4b4c-9868-1abc601beb1c")
+	)
+	(wire
+		(pts
+			(xy 66.04 140.97) (xy 66.04 137.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d9992e24-9ddb-4c18-849a-210464412530")
+	)
+	(wire
+		(pts
+			(xy 66.04 128.27) (xy 71.12 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e34a8b0a-1c5f-4942-a1a8-303bb124b54c")
+	)
+	(wire
+		(pts
+			(xy 66.04 140.97) (xy 71.12 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e90ae63e-dcc9-47d8-8bdc-d29c71c8683a")
+	)
+	(wire
+		(pts
+			(xy 46.99 55.88) (xy 48.26 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ee0afbd4-44d3-48cb-a35f-90dccfdbe7aa")
+	)
+	(wire
+		(pts
+			(xy 40.64 73.66) (xy 48.26 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eeb8c258-9646-494a-8524-239ddcd22b8c")
+	)
+	(label "SIN"
+		(at 228.6 69.85 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "07d226da-65c8-476b-a65f-b9bdf4c85cc0")
+	)
+	(label "PWM"
+		(at 43.18 115.57 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0d295146-c13f-4c3f-8c79-8972c829eb5f")
+	)
+	(label "SYNC"
+		(at 43.18 134.62 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1ce948ef-17c6-40a3-ae6e-451ab2e7e7bd")
+	)
+	(label "PULSE"
+		(at 227.33 139.7 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "303c3bdb-e262-4541-ac47-24dbb0b7e404")
+	)
+	(label "PWM_IN"
+		(at 78.74 111.76 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "48a9b287-68a3-4052-b4d2-e55fd68da952")
+	)
+	(label "CV1"
+		(at 46.99 73.66 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "56a3bbab-bbc7-44b9-b864-4c5ea84750b6")
+	)
+	(label "TRI"
+		(at 227.33 93.98 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "b2da6e43-bf9d-4f47-a754-f4062d43f5bb")
+	)
+	(label "CV2"
+		(at 46.99 88.9 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "bd75ece6-c3a3-4d0e-960a-2c95e51deabf")
+	)
+	(label "SOFT_SYNC"
+		(at 71.12 128.27 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d081606e-aa98-4cdc-b1f7-34fd64ebe37b")
+	)
+	(label "HARD_SYNC"
+		(at 71.12 140.97 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d658a85a-845a-4417-be64-b08827296bac")
+	)
+	(label "SAW"
+		(at 227.33 116.84 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "e3bf7222-a815-48d5-9e1b-de5170e26524")
+	)
+	(label "LINFM"
+		(at 43.18 157.48 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e94daa9b-1582-4040-989d-b600fa8c9f1a")
+	)
+	(symbol
+		(lib_id "Eurorack Common:AudioJack2_SwitchT")
+		(at 35.56 134.62 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "03c1f3d4-ac0b-4158-a619-3fffab45897c")
+		(property "Reference" "J4"
+			(at 35.56 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "JACK_2P"
+			(at 34.925 129.6471 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Eurorack Common:Thonkicon_FP"
+			(at 35.56 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 35.56 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 35.56 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" ""
+			(at 35.56 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "S"
+			(uuid "eba55999-a795-4a58-8105-b30bf7aae47a")
+		)
+		(pin "T"
+			(uuid "e8ba3327-2a5b-4e96-b503-6f9e6ba83460")
+		)
+		(pin "TN"
+			(uuid "33dba4ea-b20c-41cf-a014-69347ab42cbe")
+		)
+		(instances
+			(project "front-panel"
+				(path "/afe6cfa3-2c58-4d63-b8e6-db021e5bde30"
+					(reference "J4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Eurorack Common:AudioJack2_SwitchT")
+		(at 234.95 116.84 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0b593287-e456-4f9a-9793-f3bc98762761")
+		(property "Reference" "J2"
+			(at 234.95 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "JACK_2P"
+			(at 235.585 121.8129 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Eurorack Common:Thonkicon_FP"
+			(at 234.95 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 234.95 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 234.95 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" ""
+			(at 234.95 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "S"
+			(uuid "ab1a897b-0fbd-4c72-b1e8-7219ea6eb68b")
+		)
+		(pin "T"
+			(uuid "7743ee44-0959-4ac5-8ec9-d5dcda2a6b39")
+		)
+		(pin "TN"
+			(uuid "a300887e-3618-4486-93f7-c6c9dd850b8b")
+		)
+		(instances
+			(project "front-panel"
+				(path "/afe6cfa3-2c58-4d63-b8e6-db021e5bde30"
+					(reference "J2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Eurorack Common:AudioJack2_SwitchT")
+		(at 35.56 157.48 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "158dbab2-3d12-4f34-b62f-73a4b550e84b")
+		(property "Reference" "J6"
+			(at 35.56 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "JACK_2P"
+			(at 34.925 152.5071 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Eurorack Common:Thonkicon_FP"
+			(at 35.56 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 35.56 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 35.56 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" ""
+			(at 35.56 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "S"
+			(uuid "b0138fba-2ba5-4032-bcba-1364bd7f26b4")
+		)
+		(pin "T"
+			(uuid "c559f5d8-37f9-49c6-8a95-69010e359d67")
+		)
+		(pin "TN"
+			(uuid "51d93767-5d70-4de2-9ea5-7da055c9f796")
+		)
+		(instances
+			(project "front-panel"
+				(path "/afe6cfa3-2c58-4d63-b8e6-db021e5bde30"
+					(reference "J6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_SPDT")
+		(at 60.96 134.62 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1d4b8af4-3493-4545-b9a3-07366b3f4863")
+		(property "Reference" "S1"
+			(at 60.96 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TS-01"
+			(at 61.214 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Eurorack Common:Sub-Miniature SPDT_FP"
+			(at 60.96 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 60.96 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Switch, single pole double throw"
+			(at 60.96 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" ""
+			(at 60.96 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e766ac95-2c54-4142-9eec-b537db197d5e")
+		)
+		(pin "2"
+			(uuid "e61ef213-f0d2-4a1d-a71c-2ec1e9c2ace2")
+		)
+		(pin "3"
+			(uuid "84c14198-bdb8-4218-a925-5b278632b959")
+		)
+		(instances
+			(project "front-panel"
+				(path "/afe6cfa3-2c58-4d63-b8e6-db021e5bde30"
+					(reference "S1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Eurorack Common:AudioJack2_SwitchT")
+		(at 236.22 69.85 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4fe9ef84-aa8f-43d3-a6eb-10f29faf90db")
+		(property "Reference" "J12"
+			(at 236.22 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "JACK_2P"
+			(at 236.855 74.8229 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Eurorack Common:Thonkicon_FP"
+			(at 236.22 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 236.22 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 236.22 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" ""
+			(at 236.22 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "S"
+			(uuid "3e6eed0e-55d3-494a-8d3d-99c26e038df5")
+		)
+		(pin "T"
+			(uuid "e640d938-1a6b-4c17-b9ad-fa2f646decb7")
+		)
+		(pin "TN"
+			(uuid "aa35cfa6-0ad3-4a6d-848b-23e369be59f8")
+		)
+		(instances
+			(project "front-panel"
+				(path "/afe6cfa3-2c58-4d63-b8e6-db021e5bde30"
+					(reference "J12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Eurorack Common:AudioJack2_SwitchT")
+		(at 234.95 93.98 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "58626e5f-43d4-4756-98a6-61c6b8a77d82")
+		(property "Reference" "J1"
+			(at 234.95 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "JACK_2P"
+			(at 235.585 98.9529 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Eurorack Common:Thonkicon_FP"
+			(at 234.95 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 234.95 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 234.95 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" ""
+			(at 234.95 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "S"
+			(uuid "2485c456-9935-4d6a-b317-13b9550fb79d")
+		)
+		(pin "T"
+			(uuid "11842040-73ce-44b0-9a56-f494911b8aff")
+		)
+		(pin "TN"
+			(uuid "d3d73fed-50f4-4742-947e-a58ce2834d8c")
+		)
+		(instances
+			(project "front-panel"
+				(path "/afe6cfa3-2c58-4d63-b8e6-db021e5bde30"
+					(reference "J1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Potentiometer")
+		(at 58.42 111.76 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6a43a28a-2d06-4bed-b8db-644e877eece0")
+		(property "Reference" "RV5"
+			(at 55.88 110.49 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "100k"
+			(at 58.42 109.22 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Eurorack Common:Alpha Potentiometer_FP"
+			(at 58.42 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 58.42 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Potentiometer"
+			(at 58.42 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" ""
+			(at 58.42 111.76 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "fd4eb8c6-caee-49ba-86e6-d7919c11ccdc")
+		)
+		(pin "2"
+			(uuid "6193eccb-f858-47b6-8bbb-7ca9e33024e5")
+		)
+		(pin "3"
+			(uuid "a127aa15-516d-4da9-b4bf-89af6850c11e")
+		)
+		(instances
+			(project "front-panel"
+				(path "/afe6cfa3-2c58-4d63-b8e6-db021e5bde30"
+					(reference "RV5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Potentiometer")
+		(at 43.18 36.83 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7be13a36-eb8e-440f-aaac-2fd6665d9f61")
+		(property "Reference" "RV3"
+			(at 40.64 35.56 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10k"
+			(at 43.18 34.29 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Eurorack Common:Alpha Potentiometer_FP"
+			(at 43.18 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 43.18 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Potentiometer"
+			(at 43.18 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "1%"
+			(at 43.18 36.83 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0d32fbdb-2a37-4863-af10-fc85c1c6174f")
+		)
+		(pin "2"
+			(uuid "a072347a-1cac-4ead-8c61-cfe38fd40342")
+		)
+		(pin "3"
+			(uuid "75d5a810-84fd-42c4-a0b7-6b82d09662a2")
+		)
+		(instances
+			(project "front-panel"
+				(path "/afe6cfa3-2c58-4d63-b8e6-db021e5bde30"
+					(reference "RV3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Eurorack Common:AudioJack2_SwitchT")
+		(at 35.56 115.57 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "83c4029c-ea50-4381-ae28-2819e74ff100")
+		(property "Reference" "J8"
+			(at 35.56 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "JACK_2P"
+			(at 34.925 110.5971 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Eurorack Common:Thonkicon_FP"
+			(at 35.56 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 35.56 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 35.56 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" ""
+			(at 35.56 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "S"
+			(uuid "2b3a9f17-48d9-4a96-974c-241efb62b934")
+		)
+		(pin "T"
+			(uuid "1eb35457-e836-4ea6-a64f-1a6f1b73f965")
+		)
+		(pin "TN"
+			(uuid "305419f0-56d9-4324-93de-a7e44fa6799a")
+		)
+		(instances
+			(project "front-panel"
+				(path "/afe6cfa3-2c58-4d63-b8e6-db021e5bde30"
+					(reference "J8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Eurorack Common:AudioJack2_SwitchT")
+		(at 234.95 139.7 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8a4f3c1c-e2f0-4363-a4bd-cff08e4d822d")
+		(property "Reference" "J7"
+			(at 234.95 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "JACK_2P"
+			(at 235.585 144.6729 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Eurorack Common:Thonkicon_FP"
+			(at 234.95 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 234.95 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 234.95 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" ""
+			(at 234.95 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "S"
+			(uuid "b62515ff-298f-4404-a6ff-0ea627ecc710")
+		)
+		(pin "T"
+			(uuid "da22af6e-c255-4535-8780-4108ecb7b8dd")
+		)
+		(pin "TN"
+			(uuid "8503f3fe-35b3-4a14-a986-802e4e8413af")
+		)
+		(instances
+			(project "front-panel"
+				(path "/afe6cfa3-2c58-4d63-b8e6-db021e5bde30"
+					(reference "J7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Eurorack Common:AudioJack2_SwitchT")
+		(at 35.56 88.9 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a3722fe0-facc-42fa-a01b-a26433c9d7fe")
+		(property "Reference" "J5"
+			(at 35.56 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "JACK_2P"
+			(at 34.925 83.9271 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Eurorack Common:Thonkicon_FP"
+			(at 35.56 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 35.56 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 35.56 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" ""
+			(at 35.56 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "S"
+			(uuid "f8df4375-570f-4eb0-868e-4f350bd24547")
+		)
+		(pin "T"
+			(uuid "60a7dcc1-b459-4b69-be02-f48b66a815f0")
+		)
+		(pin "TN"
+			(uuid "fbca7d5b-4a19-4f46-9697-74b3068179aa")
+		)
+		(instances
+			(project "front-panel"
+				(path "/afe6cfa3-2c58-4d63-b8e6-db021e5bde30"
+					(reference "J5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Eurorack Common:AudioJack2_SwitchT")
+		(at 35.56 73.66 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a67b97a6-51fd-4a32-8231-3fd10436b6ab")
+		(property "Reference" "J3"
+			(at 35.56 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "JACK_2P"
+			(at 34.925 68.6871 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Eurorack Common:Thonkicon_FP"
+			(at 35.56 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 35.56 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 35.56 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" ""
+			(at 35.56 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "S"
+			(uuid "fc052ac4-77ec-4901-baf8-c95f94903836")
+		)
+		(pin "T"
+			(uuid "c1d39a30-006e-4167-9c23-81a57fa0c1bb")
+		)
+		(pin "TN"
+			(uuid "e746ec00-0dfd-4bc7-b357-6b4860c148ef")
+		)
+		(instances
+			(project "front-panel"
+				(path "/afe6cfa3-2c58-4d63-b8e6-db021e5bde30"
+					(reference "J3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Potentiometer")
+		(at 43.18 55.88 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "dbd87a35-3166-440e-a8f0-c71d214a12a6")
+		(property "Reference" "RV4"
+			(at 40.64 54.61 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "100k"
+			(at 43.18 53.34 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Eurorack Common:Alpha Potentiometer_FP"
+			(at 43.18 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 43.18 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Potentiometer"
+			(at 43.18 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" ""
+			(at 43.18 55.88 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a9ad6ea5-8293-424c-89d4-c01baf033429")
+		)
+		(pin "2"
+			(uuid "5f74c6fb-337b-40a9-9b79-933f2f30429a")
+		)
+		(pin "3"
+			(uuid "ff203a9b-3d2e-4e1d-a6f0-12d16e5120fb")
+		)
+		(instances
+			(project "front-panel"
+				(path "/afe6cfa3-2c58-4d63-b8e6-db021e5bde30"
+					(reference "RV4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

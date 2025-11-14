@@ -21,15 +21,21 @@ jobs:
       build-type: 'dev'
       boards: |
         [
+          {
+            "name": "front-panel",
+            "kibot_config": ".kibot/jlcpcb-2layer.kibot.yaml",
+            "pcb_path": "hardware/front-panel/front-panel.kicad_pcb",
+            "sch_path": "hardware/front-panel/front-panel.kicad_sch"
+           },
            {
             "name": "control-board",
-            "kibot_config": ".kibot/jlcpcb.kibot.yaml",
+            "kibot_config": ".kibot/jlcpcb-2layer.kibot.yaml",
             "pcb_path": "hardware/control-board/control-board.kicad_pcb",
             "sch_path": "hardware/control-board/control-board.kicad_sch"
           },
           {
             "name": "main-board",
-            "kibot_config": ".kibot/jlcpcb.kibot.yaml",
+            "kibot_config": ".kibot/jlcpcb-2layer.kibot.yaml",
             "pcb_path": "hardware/main-board/main-board.kicad_pcb",
             "sch_path": "hardware/main-board/main-board.kicad_sch"
           }

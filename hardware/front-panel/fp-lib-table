@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+    (lib (name "Eurorack Common")(type "KiCad")(uri "${KIPRJMOD}/../shared/footprints/eurorack-common.pretty")(options "")(descr "Common Eurorack footprints"))
+)

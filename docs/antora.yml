@@ -19,18 +19,28 @@ ext:
         sources:
           - hardware/control-board/control-board.kicad_pcb
           - hardware/control-board/control-board.kicad_sch
+          - .kibot/jlcpcb-2layer.kibot.yaml
+          - .kibot/scripts/csv_to_asciidoc.py
         cache-dir: hardware/control-board/kibot-output
         command: >
+          sh -c '
           kibot
-          -c .kibot/jlcpcb-2layer-enhanced.kibot.yaml
+          -c .kibot/jlcpcb-2layer.kibot.yaml
           -b hardware/control-board/control-board.kicad_pcb
           -e hardware/control-board/control-board.kicad_sch
           -d hardware/control-board/kibot-output
           schematic_pdf schematic_svg
           pcb_top_pdf board_dimensions
-          render_top render_bottom render_perspective
           ibom
+          csvbom
           step
+          pcb3d
+          &&
+          python3 .kibot/scripts/csv_to_asciidoc.py
+          hardware/control-board/kibot-output/bom/control-board_bom.csv
+          docs/modules/ROOT/partials/generated/bom/control-board_bom.adoc
+          --datasheet-column Datasheet
+          '
       scan:
         # Schematics SVG - to images (for inline display)
         - dir: hardware/control-board/kibot-output/docs/schematics
@@ -60,6 +70,13 @@ ext:
         - dir: hardware/control-board/kibot-output/mechanical
           files: '**/*.step'
           into: modules/ROOT/attachments/generated/control-board/mechanical
+        - dir: hardware/control-board/kibot-output/bom
+          files: '**/*.csv'
+          into: modules/ROOT/attachments/generated/control-board/bom
+        # Generated BOM partials
+        - dir: docs/modules/ROOT/partials/generated/bom
+          files: 'control-board_bom.adoc'
+          into: modules/ROOT/partials/generated/bom
 
     # Generate documentation artifacts for main-board
     - run:
@@ -67,18 +84,28 @@ ext:
         sources:
           - hardware/main-board/main-board.kicad_pcb
           - hardware/main-board/main-board.kicad_sch
+          - .kibot/jlcpcb-2layer.kibot.yaml
+          - .kibot/scripts/csv_to_asciidoc.py
         cache-dir: hardware/main-board/kibot-output
         command: >
+          sh -c '
           kibot
-          -c .kibot/jlcpcb-2layer-enhanced.kibot.yaml
+          -c .kibot/jlcpcb-2layer.kibot.yaml
           -b hardware/main-board/main-board.kicad_pcb
           -e hardware/main-board/main-board.kicad_sch
           -d hardware/main-board/kibot-output
           schematic_pdf schematic_svg
           pcb_top_pdf board_dimensions
-          render_top render_bottom render_perspective
           ibom
+          csvbom
           step
+          pcb3d
+          &&
+          python3 .kibot/scripts/csv_to_asciidoc.py
+          hardware/main-board/kibot-output/bom/main-board_bom.csv
+          docs/modules/ROOT/partials/generated/bom/main-board_bom.adoc
+          --datasheet-column Datasheet
+          '
       scan:
         # Schematics SVG - to images (for inline display)
         - dir: hardware/main-board/kibot-output/docs/schematics
@@ -108,3 +135,193 @@ ext:
         - dir: hardware/main-board/kibot-output/mechanical
           files: '**/*.step'
           into: modules/ROOT/attachments/generated/main-board/mechanical
+        - dir: hardware/main-board/kibot-output/bom
+          files: '**/*.csv'
+          into: modules/ROOT/attachments/generated/main-board/bom
+        # Generated BOM partials
+        - dir: docs/modules/ROOT/partials/generated/bom
+          files: 'main-board_bom.adoc'
+          into: modules/ROOT/partials/generated/bom
+
+    # Generate control-board Blender renders (after pcb3d is built)
+    - run:
+        key: control-board-renders
+        sources:
+          - hardware/control-board/control-board.kicad_pcb
+          - .kibot/scripts/render_boards_blender.py
+        cache-dir: hardware/control-board/kibot-output/docs/renders
+        command: >
+          sh -c '
+          blender --background --python .kibot/scripts/render_boards_blender.py --
+          --board hardware/control-board/kibot-output/blender/control-board.pcb3d
+          --board-offset 0
+          --output hardware/control-board/kibot-output/docs/renders/control-board_3D_top.png
+          --camera-view top
+          --orthographic
+          --samples ${BLENDER_SAMPLES:-100}
+          --resolution-x 1920
+          --resolution-y 1080
+          --background-color "#151515"
+          --auto-crop
+          &&
+          blender --background --python .kibot/scripts/render_boards_blender.py --
+          --board hardware/control-board/kibot-output/blender/control-board.pcb3d
+          --board-offset 0
+          --output hardware/control-board/kibot-output/docs/renders/control-board_3D_bottom.png
+          --camera-view bottom
+          --orthographic
+          --samples ${BLENDER_SAMPLES:-100}
+          --resolution-x 1920
+          --resolution-y 1080
+          --background-color "#151515"
+          --auto-crop
+          &&
+          blender --background --python .kibot/scripts/render_boards_blender.py --
+          --board hardware/control-board/kibot-output/blender/control-board.pcb3d
+          --board-offset 0
+          --output hardware/control-board/kibot-output/docs/renders/control-board_3D_perspective.png
+          --camera-view angle
+          --samples ${BLENDER_SAMPLES:-100}
+          --resolution-x 1920
+          --resolution-y 1080
+          --background-color "#151515"
+          --auto-crop
+          '
+      scan:
+        - dir: hardware/control-board/kibot-output/docs/renders
+          files: '**/*.{png,jpg}'
+          into: modules/ROOT/images/generated/control-board/renders
+
+    # Generate main-board Blender renders (after pcb3d is built)
+    - run:
+        key: main-board-renders
+        sources:
+          - hardware/main-board/main-board.kicad_pcb
+          - .kibot/scripts/render_boards_blender.py
+        cache-dir: hardware/main-board/kibot-output/docs/renders
+        command: >
+          sh -c '
+          blender --background --python .kibot/scripts/render_boards_blender.py --
+          --board hardware/main-board/kibot-output/blender/main-board.pcb3d
+          --board-offset 0
+          --output hardware/main-board/kibot-output/docs/renders/main-board_3D_top.png
+          --camera-view top
+          --orthographic
+          --samples ${BLENDER_SAMPLES:-100}
+          --resolution-x 1920
+          --resolution-y 1080
+          --background-color "#151515"
+          --auto-crop
+          &&
+          blender --background --python .kibot/scripts/render_boards_blender.py --
+          --board hardware/main-board/kibot-output/blender/main-board.pcb3d
+          --board-offset 0
+          --output hardware/main-board/kibot-output/docs/renders/main-board_3D_bottom.png
+          --camera-view bottom
+          --orthographic
+          --samples ${BLENDER_SAMPLES:-100}
+          --resolution-x 1920
+          --resolution-y 1080
+          --background-color "#151515"
+          --auto-crop
+          &&
+          blender --background --python .kibot/scripts/render_boards_blender.py --
+          --board hardware/main-board/kibot-output/blender/main-board.pcb3d
+          --board-offset 0
+          --output hardware/main-board/kibot-output/docs/renders/main-board_3D_perspective.png
+          --camera-view angle
+          --samples ${BLENDER_SAMPLES:-100}
+          --resolution-x 1920
+          --resolution-y 1080
+          --background-color "#151515"
+          --auto-crop
+          '
+      scan:
+        - dir: hardware/main-board/kibot-output/docs/renders
+          files: '**/*.{png,jpg}'
+          into: modules/ROOT/images/generated/main-board/renders
+
+    # Generate PCB3D for front panel (no components)
+    - run:
+        key: front-panel-pcb3d
+        sources:
+          - hardware/front-panel/front-panel.kicad_pcb
+          - .kibot/front-panel.kibot.yaml
+        cache-dir: hardware/front-panel/kibot-output
+        command: >
+          kibot
+          -c .kibot/front-panel.kibot.yaml
+          -b hardware/front-panel/front-panel.kicad_pcb
+          -d hardware/front-panel/kibot-output
+          pcb3d
+
+    # Generate front-panel Blender renders (after pcb3d is built)
+    - run:
+        key: front-panel-renders
+        sources:
+          - hardware/front-panel/front-panel.kicad_pcb
+          - .kibot/scripts/render_boards_blender.py
+        cache-dir: hardware/front-panel/kibot-output/docs/renders
+        command: >
+          sh -c '
+          blender --background --python .kibot/scripts/render_boards_blender.py --
+          --board hardware/front-panel/kibot-output/blender/front-panel.pcb3d
+          --board-offset 0
+          --output hardware/front-panel/kibot-output/docs/renders/front-panel_3D_top.png
+          --camera-view top
+          --orthographic
+          --samples ${BLENDER_SAMPLES:-100}
+          --resolution-x 1920
+          --resolution-y 1080
+          --background-color "#151515"
+          --auto-crop
+          &&
+          blender --background --python .kibot/scripts/render_boards_blender.py --
+          --board hardware/front-panel/kibot-output/blender/front-panel.pcb3d
+          --board-offset 0
+          --output hardware/front-panel/kibot-output/docs/renders/front-panel_3D_perspective.png
+          --camera-view angle
+          --samples ${BLENDER_SAMPLES:-100}
+          --resolution-x 1920
+          --resolution-y 1080
+          --background-color "#151515"
+          --auto-crop
+          '
+      scan:
+        - dir: hardware/front-panel/kibot-output/docs/renders
+          files: '**/*.{png,jpg}'
+          into: modules/ROOT/images/generated/front-panel/renders
+
+    # Generate stacked board render (after all three boards are built)
+    - run:
+        key: stacked-render
+        sources:
+          - hardware/front-panel/front-panel.kicad_pcb
+          - hardware/control-board/control-board.kicad_pcb
+          - hardware/main-board/main-board.kicad_pcb
+          - .kibot/scripts/render_boards_blender.py
+        cache-dir: docs/generated/stacked-output
+        command: >
+          sh -c '
+          blender --background --python .kibot/scripts/render_boards_blender.py --
+          --board hardware/main-board/kibot-output/blender/main-board.pcb3d
+          --board-offset 0
+          --board hardware/control-board/kibot-output/blender/control-board.pcb3d
+          --board-offset 13.0
+          --board hardware/front-panel/kibot-output/blender/front-panel.pcb3d
+          --board-offset 26.0
+          --board-shift-x 0.930
+          --board-shift-y -10.859
+          --output docs/generated/stacked-output/stacked_render.png
+          --samples ${BLENDER_SAMPLES:-100}
+          --resolution-x 1920
+          --resolution-y 1080
+          --background-color "#151515"
+          --auto-crop
+          '
+      scan:
+        # Stacked render - to images (for inline display)
+        - dir: docs/generated/stacked-output
+          files: '**/*.png'
+          into: modules/ROOT/images/generated/stacked
+

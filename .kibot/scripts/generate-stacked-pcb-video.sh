@@ -1,0 +1,16 @@
+docker run --rm -v "/home/icon0049/dev/hardware/sdiy/cem3340-vco:/work" -w /work eurorack-docker:local blender --background --python .kibot/scripts/render_boards_blender.py -- \
+   --board hardware/main-board/kibot-output/blender/main-board.pcb3d \
+   --board-offset 0 \
+   --board hardware/control-board/kibot-output/blender/control-board.pcb3d \
+   --board-offset 13.0 \
+   --board hardware/front-panel/kibot-output/blender/front-panel.pcb3d \
+   --board-offset 26.0 \
+   --board-shift-x 0.930 \
+   --board-shift-y -10.859 \
+   --output docs/test-renders/animations/stacked_test.mp4 \
+   --animate \
+   --samples 50 \
+   --frames 96 \
+   --fps 24 \
+   --resolution-x 640 --resolution-y 480 \
+   --background-color "#151515"

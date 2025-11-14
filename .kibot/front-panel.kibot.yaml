@@ -1,0 +1,64 @@
+kibot:
+  version: 1
+
+outputs:
+  # PCB3D Export for Blender (pcb2blender plugin) - NO COMPONENTS
+  - name: pcb3d_tools
+    comment: 'PCB data for pcb2blender'
+    type: pcb2blender_tools
+    dir: 'blender/%f_pcb3d'
+    options:
+      stackup_create: true
+      stackup_file: stackup
+      stackup_dir: layers
+      stackup_format: BIN
+
+  - name: pcb3d_layers
+    comment: 'Layer SVGs for pcb2blender'
+    type: svg
+    dir: 'blender/%f_pcb3d/layers'
+    options:
+      output: "%i.%x"
+      margin: 1
+      limit_viewbox: true
+      svg_precision: 6
+      drill_marks: none
+    layers:
+      - F.Cu
+      - B.Cu
+      - F.Paste
+      - B.Paste
+      - layer: F.SilkS
+        suffix: F_SilkS
+      - layer: B.SilkS
+        suffix: B_SilkS
+      - F.Mask
+      - B.Mask
+
+  - name: pcb3d_vrml
+    comment: 'VRML without any component models'
+    type: vrml
+    dir: 'blender/%f_pcb3d'
+    options:
+      output: pcb.wrl
+      dir_models: components
+      use_pcb_center_as_ref: false
+      model_units: meters
+      download: false
+      # Exclude all components
+      components: none
+
+  - name: pcb3d
+    comment: 'Complete PCB3D file for Blender import (no components)'
+    type: compress
+    dir: blender
+    options:
+      output: '%f.pcb3d'
+      format: ZIP
+      files:
+        - from_output: pcb3d_tools
+          from_output_dir: true
+        - from_output: pcb3d_layers
+          dest: layers
+        - from_output: pcb3d_vrml
+          from_output_dir: true

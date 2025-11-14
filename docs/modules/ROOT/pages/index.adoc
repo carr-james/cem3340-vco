@@ -9,33 +9,73 @@ ifdef::show-wip-warnings[]
 ====
 endif::[]
 
-Welcome to the CEM3340 VCO project documentation.
-
 == Overview
 
-This is a Eurorack-format voltage-controlled oscillator based on the CEM3340 chip.
+A Eurorack-format voltage-controlled oscillator (VCO) built around the legendary CEM3340 chip.
 
-_Content to be added._
+This module is a faithful recreation of the excellent https://github.com/kassu/kassutronics/tree/master/documentation/VCO%203340[Kassutronics VCO 3340] design.
+
+video::stacked_render_animation.mp4[width=100%,align=left,opts="autoplay,loop,nocontrols,muted"]
 
 == Project Structure
 
-This project consists of two boards:
+This project consists of three PCBs:
 
-* *Control Board* - Front panel controls and CV inputs
+* *Front Panel*
+* *Control Board* - Front panel controls and input/output jacks
 * *Main Board* - Core oscillator circuitry
-
-== Quick Links
-
-* xref:getting-started.adoc[Getting Started]
-* xref:build-guide.adoc[Build Guide]
-* xref:schematics.adoc[Schematics]
-* xref:interactive-bom.adoc[Interactive BOM]
-* xref:downloads.adoc[Downloads]
 
 == Features
 
-_Content to be added._
+* Four waveform outputs: Sine, Triangle, Sawtooth, and Pulse
+* Coarse and fine frequency control for precise tuning
+* PWM control with dual functionality: attenuates external PWM input or directly controls pulse width when unpatched
+* Dual exponential V/Oct inputs for accurate pitch tracking
+* Linear FM input for frequency modulation
+* Switchable hard and soft sync modes
 
 == Specifications
 
-_Content to be added._
+NOTE: Specifications below are based on the original Kassutronics design. Independent testing and verification are planned.
+
+=== Physical
+
+* Width: 8HP
+* Panel controls: 1x 20mm knob, 2x 10mm knobs, 1x sub-miniature switch, 9x jacks
+* PCB stack: 3 boards (front panel, control board, main board)
+
+=== Power
+
+* Supply voltage: ±12V
+* Current draw: ~15mA on both +12V and -12V rails
+
+=== Frequency Control
+
+* Coarse tuning range: 4Hz - 5.3kHz
+* Fine tuning range: ±2 semitones
+* V/Oct tracking error (10Hz - 10kHz): ±5 cents
+
+=== Outputs
+
+* Waveforms: Triangle, Sawtooth (up ramp), Pulse, Sine
+* Output level: 10Vpp (all waveforms)
+* Output impedance: 1kΩ (all outputs)
+
+=== Inputs
+
+* V/Oct input impedance: 100kΩ
+* Linear FM input impedance: 1MΩ
+* PWM input range (attenuator at maximum): ±5V
+* PWM modulation depth (attenuator at maximum): 10%/V
+
+=== Pulse Width Modulation
+
+* Initial pulse width (0V at PWM input): 50%
+* Pulse width range (no PWM input connected): 50% - 95%
+* Frequency variation with PWM (50% to 95%): 7 cents
+
+=== Stability
+
+* Frequency variation with V~CC~: 21 cents/V
+* Frequency variation with V~EE~: <0.3 cents/V
+* Frequency variation with temperature: 1 cent/°C

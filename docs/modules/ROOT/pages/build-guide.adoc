@@ -12,19 +12,7 @@ _Content to be added._
 
 _Content to be added._
 
-== Soldering Tips
-
-_Content to be added._
-
-== Testing
-
-_Content to be added._
-
 == Calibration
-
-_Content to be added._
-
-== Troubleshooting
 
 _Content to be added._
 
