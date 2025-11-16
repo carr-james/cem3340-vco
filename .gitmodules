@@ -1,3 +1,3 @@
 [submodule "hardware/shared"]
 	path = hardware/shared
-	url = git@github.com:carr-james/eurorack-common-library.git
+	url = https://github.com/carr-james/eurorack-common-library.git
