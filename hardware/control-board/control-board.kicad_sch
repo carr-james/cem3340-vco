@@ -2546,7 +2546,7 @@
 				)
 			)
 		)
-		(property "Value" "JACK_2P"
+		(property "Value" "~"
 			(at 34.925 134.7271 0)
 			(effects
 				(font
@@ -2554,7 +2554,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles"
+		(property "Footprint" "Eurorack Common:Thonkicon"
 			(at 35.56 139.7 0)
 			(effects
 				(font
@@ -2563,7 +2563,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.thonk.co.uk/wp-content/uploads/2018/07/Thonkiconn_Jack_Datasheet-new.jpg"
 			(at 35.56 139.7 0)
 			(effects
 				(font
@@ -2578,6 +2578,33 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Tolerance" ""
+			(at 35.56 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Note" ""
+			(at 35.56 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Reference_Part" "Thonkiconn"
+			(at 35.56 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "S"
@@ -2681,7 +2708,7 @@
 				)
 			)
 		)
-		(property "Value" "JACK_2P"
+		(property "Value" "~"
 			(at 235.585 126.8929 0)
 			(effects
 				(font
@@ -2689,7 +2716,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles"
+		(property "Footprint" "Eurorack Common:Thonkicon"
 			(at 234.95 121.92 0)
 			(effects
 				(font
@@ -2698,7 +2725,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.thonk.co.uk/wp-content/uploads/2018/07/Thonkiconn_Jack_Datasheet-new.jpg"
 			(at 234.95 121.92 0)
 			(effects
 				(font
@@ -2713,6 +2740,33 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Tolerance" ""
+			(at 234.95 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Note" ""
+			(at 234.95 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Reference_Part" "Thonkiconn"
+			(at 234.95 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "S"
@@ -2817,7 +2871,7 @@
 				)
 			)
 		)
-		(property "Value" "JACK_2P"
+		(property "Value" "~"
 			(at 34.925 157.5871 0)
 			(effects
 				(font
@@ -2825,7 +2879,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles"
+		(property "Footprint" "Eurorack Common:Thonkicon"
 			(at 35.56 162.56 0)
 			(effects
 				(font
@@ -2834,7 +2888,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.thonk.co.uk/wp-content/uploads/2018/07/Thonkiconn_Jack_Datasheet-new.jpg"
 			(at 35.56 162.56 0)
 			(effects
 				(font
@@ -2849,6 +2903,33 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Tolerance" ""
+			(at 35.56 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Note" ""
+			(at 35.56 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Reference_Part" "Thonkiconn"
+			(at 35.56 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "S"
@@ -2969,7 +3050,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.thonk.co.uk/wp-content/uploads/2017/05/DW1-SPDT-ON-ON-2MS1T1B1M2QES.pdf"
 			(at 60.96 147.32 0)
 			(effects
 				(font
@@ -2979,6 +3060,33 @@
 			)
 		)
 		(property "Description" "Switch, single pole double throw"
+			(at 60.96 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" ""
+			(at 60.96 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Note" "Sub-miniature ON-ON SPDT"
+			(at 60.96 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Reference_Part" "2MS1T1B1M2QES-5"
 			(at 60.96 139.7 0)
 			(effects
 				(font
@@ -3030,7 +3138,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
+		(property "Footprint" "Eurorack Common:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 52.07 62.738 90)
 			(effects
 				(font
@@ -3039,7 +3147,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.koaspeer.com/pdfs/MF-MFS-RK.pdf"
 			(at 52.07 60.96 0)
 			(effects
 				(font
@@ -3054,6 +3162,33 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Tolerance" "1%"
+			(at 52.07 60.96 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Note" ""
+			(at 52.07 60.96 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Reference_Part" "MF1/4DC1504F"
+			(at 52.07 60.96 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -3227,7 +3362,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:C_Rect_L4.6mm_W3.0mm_P2.50mm_MKS02_FKP02"
+		(property "Footprint" "Eurorack Common:C_Disc_D3.4mm_W2.1mm_P2.50mm"
 			(at 55.88 138.7348 0)
 			(effects
 				(font
@@ -3236,7 +3371,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.mouser.co.uk/datasheet/3/508/1/KEM_C1050_GOLDMAX_X7R.pdf"
 			(at 52.07 139.7 0)
 			(effects
 				(font
@@ -3251,6 +3386,33 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 52.07 139.7 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Note" "X7R ceramic, 2.5mm pitch"
+			(at 52.07 139.7 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Reference_Part" "C322C103K1R5TA"
+			(at 52.07 139.7 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -3285,7 +3447,7 @@
 				)
 			)
 		)
-		(property "Value" "Top Left(M)"
+		(property "Value" "~"
 			(at 123.19 48.26 0)
 			(effects
 				(font
@@ -3293,7 +3455,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
+		(property "Footprint" "Eurorack Common:PinHeader_1x04_P2.54mm_Vertical"
 			(at 118.11 40.64 0)
 			(effects
 				(font
@@ -3312,6 +3474,33 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x04, script generated"
+			(at 118.11 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" ""
+			(at 118.11 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Note" ""
+			(at 118.11 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Reference_Part" "1x4 pin header"
 			(at 118.11 40.64 0)
 			(effects
 				(font
@@ -3366,7 +3555,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
+		(property "Footprint" "Eurorack Common:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 52.07 80.518 90)
 			(effects
 				(font
@@ -3375,7 +3564,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.koaspeer.com/pdfs/MF-MFS-RK.pdf"
 			(at 52.07 78.74 0)
 			(effects
 				(font
@@ -3390,6 +3579,33 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Tolerance" "1%"
+			(at 52.07 78.74 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Note" "Matched to 0.1% (within 100 ohms)"
+			(at 52.07 78.74 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Reference_Part" "MF1/4DC1003F"
+			(at 52.07 78.74 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -3424,7 +3640,7 @@
 				)
 			)
 		)
-		(property "Value" "JACK_2P"
+		(property "Value" "~"
 			(at 236.855 79.9029 0)
 			(effects
 				(font
@@ -3432,7 +3648,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles"
+		(property "Footprint" "Eurorack Common:Thonkicon"
 			(at 236.22 74.93 0)
 			(effects
 				(font
@@ -3441,7 +3657,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.thonk.co.uk/wp-content/uploads/2018/07/Thonkiconn_Jack_Datasheet-new.jpg"
 			(at 236.22 74.93 0)
 			(effects
 				(font
@@ -3456,6 +3672,33 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Tolerance" ""
+			(at 236.22 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Note" ""
+			(at 236.22 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Reference_Part" "Thonkiconn"
+			(at 236.22 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "S"
@@ -3493,7 +3736,7 @@
 				)
 			)
 		)
-		(property "Value" "Top Right (M)"
+		(property "Value" "~"
 			(at 153.67 48.26 0)
 			(effects
 				(font
@@ -3501,7 +3744,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
+		(property "Footprint" "Eurorack Common:PinHeader_1x04_P2.54mm_Vertical"
 			(at 147.32 40.64 0)
 			(effects
 				(font
@@ -3520,6 +3763,33 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x04, script generated"
+			(at 147.32 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" ""
+			(at 147.32 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Note" ""
+			(at 147.32 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Reference_Part" "1x4 pin header"
 			(at 147.32 40.64 0)
 			(effects
 				(font
@@ -3566,7 +3836,7 @@
 				)
 			)
 		)
-		(property "Value" "JACK_2P"
+		(property "Value" "~"
 			(at 235.585 104.0329 0)
 			(effects
 				(font
@@ -3574,7 +3844,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles"
+		(property "Footprint" "Eurorack Common:Thonkicon"
 			(at 234.95 99.06 0)
 			(effects
 				(font
@@ -3583,7 +3853,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.thonk.co.uk/wp-content/uploads/2018/07/Thonkiconn_Jack_Datasheet-new.jpg"
 			(at 234.95 99.06 0)
 			(effects
 				(font
@@ -3598,6 +3868,33 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Tolerance" ""
+			(at 234.95 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Note" ""
+			(at 234.95 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Reference_Part" "Thonkiconn"
+			(at 234.95 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "S"
@@ -3720,7 +4017,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.mouser.com/catalog/specsheets/alpha%20taiwan_08192019_RD901F-40-15R1-B(resistance%20value)-00DL1%20SPEC.pdf?_gl=1*1k69a7e*_gcl_au*MTMyNTQzNTMyNC4xNzYxNjYwNjI2LjE3MjYwNDc1MTMuMTc2MzA2MjQyOC4xNzYzMDYyNDM2*_ga*MTc3NzUxOTk0MC4xNzYxNjYwNjMw*_ga_15W4STQT4T*czE3NjMwNjE1MzgkbzkkZzEkdDE3NjMwNjMzNzAkajYwJGwwJGgw"
 			(at 50.8 116.84 0)
 			(effects
 				(font
@@ -3731,6 +4028,33 @@
 		)
 		(property "Description" "Potentiometer"
 			(at 50.8 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" ""
+			(at 50.8 116.84 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Note" "Alpha 9mm vertical, metal shaft"
+			(at 50.8 116.84 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Reference_Part" "RD901F-40-15R1-B100K"
+			(at 50.8 116.84 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3904,7 +4228,7 @@
 				)
 			)
 		)
-		(property "Value" "Bottom Left(M)"
+		(property "Value" "~"
 			(at 124.46 62.23 0)
 			(effects
 				(font
@@ -3912,7 +4236,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
+		(property "Footprint" "Eurorack Common:PinHeader_1x03_P2.54mm_Vertical"
 			(at 118.11 57.15 0)
 			(effects
 				(font
@@ -3931,6 +4255,33 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x03, script generated"
+			(at 118.11 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" ""
+			(at 118.11 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Note" ""
+			(at 118.11 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Reference_Part" "1x3 pin header"
 			(at 118.11 57.15 0)
 			(effects
 				(font
@@ -3982,7 +4333,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
+		(property "Footprint" "Eurorack Common:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 214.63 143.002 90)
 			(effects
 				(font
@@ -3991,7 +4342,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.koaspeer.com/pdfs/MF-MFS-RK.pdf"
 			(at 214.63 144.78 0)
 			(effects
 				(font
@@ -4006,6 +4357,33 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Tolerance" "1%"
+			(at 214.63 144.78 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Note" ""
+			(at 214.63 144.78 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Reference_Part" "MF1/4DC1001F"
+			(at 214.63 144.78 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -4048,7 +4426,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
+		(property "Footprint" "Eurorack Common:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 214.63 97.282 90)
 			(effects
 				(font
@@ -4057,7 +4435,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.koaspeer.com/pdfs/MF-MFS-RK.pdf"
 			(at 214.63 99.06 0)
 			(effects
 				(font
@@ -4072,6 +4450,33 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Tolerance" "1%"
+			(at 214.63 99.06 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Note" ""
+			(at 214.63 99.06 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Reference_Part" "MF1/4DC1001F"
+			(at 214.63 99.06 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -4125,7 +4530,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.mouser.com/catalog/specsheets/alpha%20taiwan_08192019_RD901F-40-15R1-B(resistance%20value)-00DL1%20SPEC.pdf?_gl=1*1fskzh4*_gcl_au*MTMyNTQzNTMyNC4xNzYxNjYwNjI2LjE3MjYwNDc1MTMuMTc2MzA2MjQyOC4xNzYzMDYyNDM2*_ga*MTc3NzUxOTk0MC4xNzYxNjYwNjMw*_ga_15W4STQT4T*czE3NjMwNjE1MzgkbzkkZzEkdDE3NjMwNjM0MzkkajYwJGwwJGgw"
 			(at 43.18 41.91 0)
 			(effects
 				(font
@@ -4136,6 +4541,33 @@
 		)
 		(property "Description" "Potentiometer"
 			(at 43.18 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" ""
+			(at 43.18 41.91 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Note" "Alpha 9mm vertical, metal shaft"
+			(at 43.18 41.91 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Reference_Part" "RD901F-40-15R1-B10K"
+			(at 43.18 41.91 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4244,7 +4676,7 @@
 				)
 			)
 		)
-		(property "Value" "JACK_2P"
+		(property "Value" "~"
 			(at 34.925 115.6771 0)
 			(effects
 				(font
@@ -4252,7 +4684,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles"
+		(property "Footprint" "Eurorack Common:Thonkicon"
 			(at 35.56 120.65 0)
 			(effects
 				(font
@@ -4261,7 +4693,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.thonk.co.uk/wp-content/uploads/2018/07/Thonkiconn_Jack_Datasheet-new.jpg"
 			(at 35.56 120.65 0)
 			(effects
 				(font
@@ -4276,6 +4708,33 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Tolerance" ""
+			(at 35.56 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Note" ""
+			(at 35.56 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Reference_Part" "Thonkiconn"
+			(at 35.56 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "S"
@@ -4313,7 +4772,7 @@
 				)
 			)
 		)
-		(property "Value" "JACK_2P"
+		(property "Value" "~"
 			(at 235.585 149.7529 0)
 			(effects
 				(font
@@ -4321,7 +4780,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles"
+		(property "Footprint" "Eurorack Common:Thonkicon"
 			(at 234.95 144.78 0)
 			(effects
 				(font
@@ -4330,7 +4789,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.thonk.co.uk/wp-content/uploads/2018/07/Thonkiconn_Jack_Datasheet-new.jpg"
 			(at 234.95 144.78 0)
 			(effects
 				(font
@@ -4345,6 +4804,33 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Tolerance" ""
+			(at 234.95 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Note" ""
+			(at 234.95 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Reference_Part" "Thonkiconn"
+			(at 234.95 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "S"
@@ -4522,7 +5008,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
+		(property "Footprint" "Eurorack Common:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 52.07 43.688 90)
 			(effects
 				(font
@@ -4531,7 +5017,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.koaspeer.com/pdfs/MF-MFS-RK.pdf"
 			(at 52.07 41.91 0)
 			(effects
 				(font
@@ -4546,6 +5032,33 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Tolerance" "1%"
+			(at 52.07 41.91 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Note" ""
+			(at 52.07 41.91 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Reference_Part" "MF1/4DC4702F"
+			(at 52.07 41.91 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -4588,7 +5101,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
+		(property "Footprint" "Eurorack Common:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 60.96 118.618 90)
 			(effects
 				(font
@@ -4597,7 +5110,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.koaspeer.com/pdfs/MF-MFS-RK.pdf"
 			(at 60.96 116.84 0)
 			(effects
 				(font
@@ -4612,6 +5125,33 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Tolerance" "1%"
+			(at 60.96 116.84 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Note" ""
+			(at 60.96 116.84 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Reference_Part" "MF1/4DC1003F"
+			(at 60.96 116.84 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -4646,7 +5186,7 @@
 				)
 			)
 		)
-		(property "Value" "JACK_2P"
+		(property "Value" "~"
 			(at 34.925 89.0071 0)
 			(effects
 				(font
@@ -4654,7 +5194,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles"
+		(property "Footprint" "Eurorack Common:Thonkicon"
 			(at 35.56 93.98 0)
 			(effects
 				(font
@@ -4663,7 +5203,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.thonk.co.uk/wp-content/uploads/2018/07/Thonkiconn_Jack_Datasheet-new.jpg"
 			(at 35.56 93.98 0)
 			(effects
 				(font
@@ -4678,6 +5218,33 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Tolerance" ""
+			(at 35.56 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Note" ""
+			(at 35.56 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Reference_Part" "Thonkiconn"
+			(at 35.56 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "S"
@@ -4788,7 +5355,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:C_Rect_L4.6mm_W3.0mm_P2.50mm_MKS02_FKP02"
+		(property "Footprint" "Eurorack Common:C_Disc_D3.4mm_W2.1mm_P2.50mm"
 			(at 55.88 161.5948 0)
 			(effects
 				(font
@@ -4797,7 +5364,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.mouser.co.uk/datasheet/3/508/1/KEM_C1050_GOLDMAX_X7R.pdf"
 			(at 52.07 162.56 0)
 			(effects
 				(font
@@ -4812,6 +5379,33 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 52.07 162.56 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Note" "X7R ceramic, 2.5mm pitch"
+			(at 52.07 162.56 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Reference_Part" "C322C103K1R5TA"
+			(at 52.07 162.56 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -4846,7 +5440,7 @@
 				)
 			)
 		)
-		(property "Value" "JACK_2P"
+		(property "Value" "~"
 			(at 34.925 73.7671 0)
 			(effects
 				(font
@@ -4854,7 +5448,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles"
+		(property "Footprint" "Eurorack Common:Thonkicon"
 			(at 35.56 78.74 0)
 			(effects
 				(font
@@ -4863,7 +5457,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.thonk.co.uk/wp-content/uploads/2018/07/Thonkiconn_Jack_Datasheet-new.jpg"
 			(at 35.56 78.74 0)
 			(effects
 				(font
@@ -4878,6 +5472,33 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Tolerance" ""
+			(at 35.56 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Note" ""
+			(at 35.56 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Reference_Part" "Thonkiconn"
+			(at 35.56 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "S"
@@ -5047,7 +5668,7 @@
 				)
 			)
 		)
-		(property "Value" "Bottom Right(M)"
+		(property "Value" "~"
 			(at 154.94 62.23 0)
 			(effects
 				(font
@@ -5055,7 +5676,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
+		(property "Footprint" "Eurorack Common:PinHeader_1x03_P2.54mm_Vertical"
 			(at 147.32 57.15 0)
 			(effects
 				(font
@@ -5074,6 +5695,33 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x03, script generated"
+			(at 147.32 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" ""
+			(at 147.32 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Note" ""
+			(at 147.32 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Reference_Part" "1x3 pin header"
 			(at 147.32 57.15 0)
 			(effects
 				(font
@@ -5322,7 +5970,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
+		(property "Footprint" "Eurorack Common:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 214.63 120.142 90)
 			(effects
 				(font
@@ -5331,7 +5979,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.koaspeer.com/pdfs/MF-MFS-RK.pdf"
 			(at 214.63 121.92 0)
 			(effects
 				(font
@@ -5346,6 +5994,33 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Tolerance" "1%"
+			(at 214.63 121.92 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Note" ""
+			(at 214.63 121.92 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Reference_Part" "MF1/4DC1001F"
+			(at 214.63 121.92 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -5531,7 +6206,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.mouser.com/catalog/specsheets/alpha%20taiwan_08192019_RD901F-40-15R1-B(resistance%20value)-00DL1%20SPEC.pdf?_gl=1*1k69a7e*_gcl_au*MTMyNTQzNTMyNC4xNzYxNjYwNjI2LjE3MjYwNDc1MTMuMTc2MzA2MjQyOC4xNzYzMDYyNDM2*_ga*MTc3NzUxOTk0MC4xNzYxNjYwNjMw*_ga_15W4STQT4T*czE3NjMwNjE1MzgkbzkkZzEkdDE3NjMwNjMzNzAkajYwJGwwJGgw"
 			(at 43.18 60.96 0)
 			(effects
 				(font
@@ -5542,6 +6217,33 @@
 		)
 		(property "Description" "Potentiometer"
 			(at 43.18 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" ""
+			(at 43.18 60.96 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Note" "Alpha 9mm vertical, metal shaft"
+			(at 43.18 60.96 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Reference_Part" "RD901F-40-15R1-B100K"
+			(at 43.18 60.96 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5724,7 +6426,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
+		(property "Footprint" "Eurorack Common:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 214.63 73.152 90)
 			(effects
 				(font
@@ -5733,7 +6435,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.koaspeer.com/pdfs/MF-MFS-RK.pdf"
 			(at 214.63 74.93 0)
 			(effects
 				(font
@@ -5748,6 +6450,33 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Tolerance" "1%"
+			(at 214.63 74.93 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Note" ""
+			(at 214.63 74.93 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Reference_Part" "MF1/4DC1001F"
+			(at 214.63 74.93 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -5790,7 +6519,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
+		(property "Footprint" "Eurorack Common:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 52.07 95.758 90)
 			(effects
 				(font
@@ -5799,7 +6528,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.koaspeer.com/pdfs/MF-MFS-RK.pdf"
 			(at 52.07 93.98 0)
 			(effects
 				(font
@@ -5814,6 +6543,33 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Tolerance" "1%"
+			(at 52.07 93.98 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Note" "Matched to 0.1% (within 100 ohms)"
+			(at 52.07 93.98 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Reference_Part" "MF1/4DC1003F"
+			(at 52.07 93.98 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"

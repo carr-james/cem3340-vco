@@ -98,6 +98,32 @@ outputs:
         - id: Side
           name: Layer
 
+  - name: csvbom
+    comment: 'Bill of Materials in CSV format for the docs'
+    type: bom
+    dir: bom
+    options:
+      output: '%f_bom.%x'
+      group_fields: ['part', 'part lib', 'value', 'footprint', 'footprint lib', 'voltage', 'tolerance', 'current', 'power', 'Note']
+      ref_separator: ', '
+      csv:
+        hide_pcb_info: true
+        hide_stats_info: true
+        quote_all: true
+      columns:
+        - field: References
+          name: Designator
+        - field: '${QUANTITY}'
+          name: Qty
+        - field: Value
+          name: Value
+        - field: Datasheet
+          name: Datasheet
+        - field: Note
+          name: Note
+        - field: Reference_Part
+          name: 'Reference Part'
+
   - name: ibom
     comment: 'Interactive HTML BOM for assembly'
     type: ibom
@@ -111,7 +137,7 @@ outputs:
       no_redraw_on_drag: false
       board_rotation: 0
       checkboxes: 'Sourced,Placed'
-      extra_fields: "Value,Footprint,Description,Notes,Datasheet,Manufacturer Part,LCSC Part"
+      extra_fields: "Note,Datasheet"
       extra_data_file: "%F.kicad_pcb"
       bom_view: 'left-right'
       layer_view: 'FB'
@@ -193,8 +219,11 @@ outputs:
     dir: docs/renders
     options:
       output: '%f_3D_top.%x'
+      view: 'top'
       ray_tracing: true
-      orthographic: false
+      orthographic: true
+      auto_crop: true
+      download: true
       zoom: 0
       rotate_x: 0
       rotate_y: 0
@@ -203,6 +232,7 @@ outputs:
       background2: '#CCCCE5'
       width: 1920
       height: 1080
+      wait_render: -10
 
   - name: render_bottom
     comment: '3D render from bottom'
@@ -210,16 +240,20 @@ outputs:
     dir: docs/renders
     options:
       output: '%f_3D_bottom.%x'
+      view: 'bottom'
       ray_tracing: true
-      orthographic: false
+      orthographic: true
+      auto_crop: true
+      download: true
       zoom: 0
       rotate_x: 0
-      rotate_y: 180
+      rotate_y: 0
       rotate_z: 0
       background1: '#66667F'
       background2: '#CCCCE5'
       width: 1920
       height: 1080
+      wait_render: -10
 
   - name: render_perspective
     comment: '3D render perspective view'
@@ -227,16 +261,132 @@ outputs:
     dir: docs/renders
     options:
       output: '%f_3D_perspective.%x'
+      view: 'top'
       ray_tracing: true
       orthographic: false
+      auto_crop: true
+      download: true
       zoom: 0
-      rotate_x: 30
+      rotate_x: 3
       rotate_y: 0
-      rotate_z: -30
+      rotate_z: -3
       background1: '#66667F'
       background2: '#CCCCE5'
       width: 1920
       height: 1080
+      wait_render: -10
+
+  - name: render_panel_top
+    comment: '3D render from top'
+    type: render_3d
+    dir: docs/renders
+    options:
+      output: '%f_3D_top.%x'
+      view: 'top'
+      ray_tracing: true
+      orthographic: true
+      auto_crop: true
+      download: true
+      zoom: 0
+      rotate_x: 0
+      rotate_y: 0
+      rotate_z: 0
+      background1: '#66667F'
+      background2: '#CCCCE5'
+      board: '#1C2630'
+      width: 1920
+      height: 1080
+      wait_render: -10
+
+  - name: render_panel_bottom
+    comment: '3D render from bottom'
+    type: render_3d
+    dir: docs/renders
+    options:
+      output: '%f_3D_bottom.%x'
+      view: 'bottom'
+      ray_tracing: true
+      orthographic: true
+      auto_crop: true
+      download: true
+      zoom: 0
+      rotate_x: 0
+      rotate_y: 0
+      rotate_z: 0
+      background1: '#66667F'
+      background2: '#CCCCE5'
+      board: '#1C2630'
+      width: 1920
+      height: 1080
+      wait_render: -10
+
+  - name: render_panel_perspective
+    comment: '3D render perspective view'
+    type: render_3d
+    dir: docs/renders
+    options:
+      output: '%f_3D_perspective.%x'
+      view: 'top'
+      ray_tracing: true
+      orthographic: false
+      auto_crop: true
+      download: true
+      zoom: 0
+      rotate_x: 3
+      rotate_y: 0
+      rotate_z: -3
+      background1: '#66667F'
+      background2: '#CCCCE5'
+      board: '#1C2630'
+      width: 1920
+      height: 1080
+      wait_render: -10
+
+  #
+  # Blender Exports for High Quality Renders
+  #
+  # Commented out - not used in GitHub Actions or documentation builds
+  # - name: blender_export_board
+  #   comment: 'Export board to Blender native format'
+  #   type: blender_export
+  #   dir: blender
+  #   options:
+  #     outputs:
+  #       - type: blender
+  #     pcb_import:
+  #       center: true
+  #       cut_boards: false
+  #       enhance_materials: true
+  #       stack_boards: false
+  #     point_of_view:
+  #       rotate_x: 30
+  #       rotate_y: 0
+  #       rotate_z: -30
+  #       view: Z
+
+  # Commented out - not used in GitHub Actions or documentation builds
+  # - name: blender_render_stacked
+  #   comment: 'High-quality Blender render of stacked boards'
+  #   type: blender_export
+  #   dir: docs/renders/blender
+  #   options:
+  #     outputs:
+  #       - type: render
+  #     render_options:
+  #       samples: 100
+  #       resolution_x: 1920
+  #       resolution_y: 1080
+  #       transparent_background: false
+  #     pcb_import:
+  #       center: true
+  #       cut_boards: false
+  #       enhance_materials: true
+  #       stack_boards: false
+  #     point_of_view:
+  #       rotate_x: 30
+  #       rotate_y: 0
+  #       rotate_z: -30
+  #       view: Z
 
   #
   # STEP file for mechanical design
@@ -253,6 +403,67 @@ outputs:
       origin: grid
       download: true
       kicad_3d_url: 'https://gitlab.com/kicad/libraries/kicad-packages3D/-/raw/master/'
+
+  #
+  # PCB3D Export for Blender (pcb2blender plugin)
+  #
+  - name: pcb3d_tools
+    comment: 'PCB data for pcb2blender'
+    type: pcb2blender_tools
+    dir: 'blender/%f_pcb3d'
+    options:
+      stackup_create: true
+      stackup_file: stackup
+      stackup_dir: layers
+      stackup_format: BIN
+
+  - name: pcb3d_layers
+    comment: 'Layer SVGs for pcb2blender'
+    type: svg
+    dir: 'blender/%f_pcb3d/layers'
+    options:
+      output: "%i.%x"
+      margin: 1
+      limit_viewbox: true
+      svg_precision: 6
+      drill_marks: none
+    layers:
+      - F.Cu
+      - B.Cu
+      - F.Paste
+      - B.Paste
+      - layer: F.SilkS
+        suffix: F_SilkS
+      - layer: B.SilkS
+        suffix: B_SilkS
+      - F.Mask
+      - B.Mask
+
+  - name: pcb3d_vrml
+    comment: 'VRML 3D models for pcb2blender'
+    type: vrml
+    dir: 'blender/%f_pcb3d'
+    options:
+      output: pcb.wrl
+      dir_models: components
+      use_pcb_center_as_ref: false
+      model_units: meters
+      download: true
+
+  - name: pcb3d
+    comment: 'Complete PCB3D file for Blender import'
+    type: compress
+    dir: blender
+    options:
+      output: '%f.pcb3d'
+      format: ZIP
+      files:
+        - from_output: pcb3d_tools
+          from_output_dir: true
+        - from_output: pcb3d_layers
+          dest: layers
+        - from_output: pcb3d_vrml
+          from_output_dir: true
 
   #
   # Assembly Documentation

@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "Eurorack Common")(type "KiCad")(uri "${KIPRJMOD}/../shared/symbols/eurorack-common.kicad_sym")(options "")(descr "Common Eurorack components"))
+)

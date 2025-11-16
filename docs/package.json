@@ -4,7 +4,7 @@
   "description": "Local Antora preview for CEM3340 VCO documentation",
   "private": true,
   "scripts": {
-    "docs:local": "eurorack-build --playbook local-site.yml",
+    "docs:local": "BLENDER_SAMPLES=10 eurorack-build --playbook local-site.yml --docker-image eurorack-docker:local --skip-pull",
     "docs:clean": "rm -rf build .cache ../hardware/**/kibot-output",
     "docs:preview": "python3 -m http.server 8000 --directory build/site"
   },
@@ -12,6 +12,6 @@
     "@antora/cli": "^3.1.9",
     "@antora/collector-extension": "^1.0.0-alpha.3",
     "@antora/site-generator": "^3.1.9",
-    "@carr-james/eurorack-docs-ui": "^1.5.0"
+    "@carr-james/eurorack-docs-ui": "^1.7.0"
   }
 }

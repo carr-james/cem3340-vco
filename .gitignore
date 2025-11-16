@@ -47,3 +47,7 @@ package-lock.json
 
 # KiBot generated output
 hardware/**/kibot-output/
+
+# Generated documentation artifacts
+docs/generated/
+docs/modules/ROOT/partials/generated/

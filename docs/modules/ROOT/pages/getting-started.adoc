@@ -2,25 +2,53 @@
 
 == Introduction
 
-_Content to be added._
+This guide will help you prepare for building your CEM3340 VCO module. Before starting assembly, carefully review the prerequisites and component requirements below to ensure you have everything needed for a successful build.
 
 == Prerequisites
 
 === Tools Required
 
-_Content to be added._
+* Soldering iron and solder
+* Wire cutters or flush-cut snips
+* Small flat-head screwdriver (for trimmer pot calibration)
+* Multimeter (for testing and calibration)
+* Oscilloscope or audio interface with oscilloscope software (e.g., free Zeitnitz Scope program) for VCO tuning
 
 === Components
 
-_Content to be added._
+==== Oscillator Chip
+
+The original Kassutronics VCO3340 was built and tested using the AS3340 oscillator chip. This build uses the CEM3340, which works perfectly. Other variants (AS3340, V3340, etc.) should work without modifications.
+
+==== Capacitors
+
+*Timing Capacitor (C1):* Must be NP0 or C0G ceramic for temperature stability.
+
+*Electrolytic Capacitors (C9, C10, C13):* Use low-profile versions (max height 11mm, lower is better) to ensure adequate clearance between stacked boards. Verify clearance with your chosen pin headers before soldering.
+
+*Bypass Capacitors (10nF and 100nF):* Specified as X7R ceramic. NP0/C0G or film types are acceptable alternatives, but must have 2.5mm or 2.54mm pin spacing.
+
+==== Resistors
+
+All resistors are 1/4W metal film, 1% tolerance. 1/8W resistors can be substituted without issues.
+
+*Matched Pair (R19 and R23):* For optimal V/Oct tracking, match these resistors to within 0.1kΩ of each other. Test multiple resistors and select the best-matched pair. The absolute value matters less than how closely they match each other.
+
+==== Other Components
+
+*Sync Switch:* Sub-miniature SPDT switch (available from suppliers like Thonk).
+
+*Sine Shaping JFET:* MMBFJ201 in SOT-23 package.
 
 == Bill of Materials
 
-_Content to be added._
+include::partial$generated/bom/control-board_bom.adoc[]
+
+include::partial$generated/bom/main-board_bom.adoc[]
 
 == Sourcing Parts
 
-_Content to be added._
+The majority of components can be found on Mouser. Front panel control components can all be sourced from Thonk.
 
 == Next Steps
 
