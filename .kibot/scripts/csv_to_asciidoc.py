@@ -45,7 +45,8 @@ def collect_unique_notes(rows: List[Dict[str, str]], note_column: str) -> Dict[s
 
 
 def csv_to_asciidoc_table(csv_file: Path, output_file: Path = None,
-                          datasheet_column: Optional[str] = None) -> str:
+                          datasheet_column: Optional[str] = None,
+                          note_prefix: str = '') -> str:
     """
     Convert a CSV BOM file to an AsciiDoc table.
 
@@ -57,6 +58,7 @@ def csv_to_asciidoc_table(csv_file: Path, output_file: Path = None,
         csv_file: Path to input CSV file
         output_file: Optional path to output file. If None, returns string.
         datasheet_column: Optional column name containing datasheet URLs to merge into Value
+        note_prefix: Optional prefix for note anchors to ensure uniqueness across multiple BOMs
 
     Returns:
         AsciiDoc table as string
@@ -104,7 +106,8 @@ def csv_to_asciidoc_table(csv_file: Path, output_file: Path = None,
                     note_num = note_map.get(value, '')
                     if note_num:
                         # Create a clickable link to the note definition
-                        value = f"<<note-{note_num},{note_num}>>"
+                        anchor = f"{note_prefix}note-{note_num}" if note_prefix else f"note-{note_num}"
+                        value = f"<<{anchor},{note_num}>>"
                     else:
                         value = ''
 
@@ -121,7 +124,8 @@ def csv_to_asciidoc_table(csv_file: Path, output_file: Path = None,
                 # Escape the note text
                 escaped_note = note_text.replace("|", "\\|")
                 # Add anchor so note numbers in table can link here
-                lines.append(f"[[note-{note_num}]]{note_num}. {escaped_note} +")
+                anchor = f"{note_prefix}note-{note_num}" if note_prefix else f"note-{note_num}"
+                lines.append(f"[[{anchor}]]{note_num}. {escaped_note} +")
 
         result = "\n".join(lines)
 
@@ -154,6 +158,8 @@ Examples:
     parser.add_argument('output', type=Path, nargs='?', help='Output AsciiDoc file (if not specified, prints to stdout)')
     parser.add_argument('--datasheet-column', type=str, metavar='COLUMN',
                        help='Column name containing datasheet URLs to merge into Value column')
+    parser.add_argument('--prefix', type=str, metavar='PREFIX', default='',
+                       help='Prefix for note anchors to ensure uniqueness across multiple BOMs (e.g., "control-board-")')
 
     args = parser.parse_args()
 
@@ -161,7 +167,7 @@ Examples:
         print(f"Error: Input file '{args.input}' not found", file=sys.stderr)
         sys.exit(1)
 
-    result = csv_to_asciidoc_table(args.input, args.output, args.datasheet_column)
+    result = csv_to_asciidoc_table(args.input, args.output, args.datasheet_column, args.prefix)
 
     if not args.output:
         print(result)

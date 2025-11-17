@@ -24,6 +24,7 @@ ext:
         cache-dir: hardware/control-board/kibot-output
         restore-to-worktree:
           - 'blender/**/*.pcb3d'
+          - 'docs/modules/ROOT/partials/generated/bom/*.adoc'
         command: >
           sh -c '
           kibot
@@ -42,6 +43,7 @@ ext:
           hardware/control-board/kibot-output/bom/control-board_bom.csv
           docs/modules/ROOT/partials/generated/bom/control-board_bom.adoc
           --datasheet-column Datasheet
+          --prefix control-board-
           '
       scan:
         # Schematics SVG - to images (for inline display)
@@ -91,6 +93,7 @@ ext:
         cache-dir: hardware/main-board/kibot-output
         restore-to-worktree:
           - 'blender/**/*.pcb3d'
+          - 'docs/modules/ROOT/partials/generated/bom/*.adoc'
         command: >
           sh -c '
           kibot
@@ -109,6 +112,7 @@ ext:
           hardware/main-board/kibot-output/bom/main-board_bom.csv
           docs/modules/ROOT/partials/generated/bom/main-board_bom.adoc
           --datasheet-column Datasheet
+          --prefix main-board-
           '
       scan:
         # Schematics SVG - to images (for inline display)
