@@ -22,6 +22,8 @@ ext:
           - .kibot/jlcpcb-2layer.kibot.yaml
           - .kibot/scripts/csv_to_asciidoc.py
         cache-dir: hardware/control-board/kibot-output
+        restore-to-worktree:
+          - 'blender/**/*.pcb3d'
         command: >
           sh -c '
           kibot
@@ -87,6 +89,8 @@ ext:
           - .kibot/jlcpcb-2layer.kibot.yaml
           - .kibot/scripts/csv_to_asciidoc.py
         cache-dir: hardware/main-board/kibot-output
+        restore-to-worktree:
+          - 'blender/**/*.pcb3d'
         command: >
           sh -c '
           kibot
@@ -146,8 +150,9 @@ ext:
     # Generate control-board Blender renders (after pcb3d is built)
     - run:
         key: control-board-renders
+        depends-on:
+          - control-board
         sources:
-          - hardware/control-board/control-board.kicad_pcb
           - .kibot/scripts/render_boards_blender.py
         source-commands:
           - 'python3 .kibot/scripts/list_3d_models.py hardware/control-board/control-board.kicad_pcb'
@@ -161,8 +166,8 @@ ext:
           --camera-view top
           --orthographic
           --samples ${BLENDER_SAMPLES:-100}
-          --resolution-x 1920
-          --resolution-y 1080
+          --resolution-x 640
+          --resolution-y 480
           --background-color "#151515"
           --auto-crop
           &&
@@ -173,8 +178,8 @@ ext:
           --camera-view bottom
           --orthographic
           --samples ${BLENDER_SAMPLES:-100}
-          --resolution-x 1920
-          --resolution-y 1080
+          --resolution-x 640
+          --resolution-y 480
           --background-color "#151515"
           --auto-crop
           &&
@@ -184,8 +189,8 @@ ext:
           --output hardware/control-board/kibot-output/docs/renders/control-board_3D_perspective.png
           --camera-view angle
           --samples ${BLENDER_SAMPLES:-100}
-          --resolution-x 1920
-          --resolution-y 1080
+          --resolution-x 640
+          --resolution-y 480
           --background-color "#151515"
           --auto-crop
           '
@@ -197,8 +202,9 @@ ext:
     # Generate main-board Blender renders (after pcb3d is built)
     - run:
         key: main-board-renders
+        depends-on:
+          - main-board
         sources:
-          - hardware/main-board/main-board.kicad_pcb
           - .kibot/scripts/render_boards_blender.py
         source-commands:
           - 'python3 .kibot/scripts/list_3d_models.py hardware/main-board/main-board.kicad_pcb'
@@ -212,8 +218,8 @@ ext:
           --camera-view top
           --orthographic
           --samples ${BLENDER_SAMPLES:-100}
-          --resolution-x 1920
-          --resolution-y 1080
+          --resolution-x 640
+          --resolution-y 480
           --background-color "#151515"
           --auto-crop
           &&
@@ -224,8 +230,8 @@ ext:
           --camera-view bottom
           --orthographic
           --samples ${BLENDER_SAMPLES:-100}
-          --resolution-x 1920
-          --resolution-y 1080
+          --resolution-x 640
+          --resolution-y 480
           --background-color "#151515"
           --auto-crop
           &&
@@ -235,8 +241,8 @@ ext:
           --output hardware/main-board/kibot-output/docs/renders/main-board_3D_perspective.png
           --camera-view angle
           --samples ${BLENDER_SAMPLES:-100}
-          --resolution-x 1920
-          --resolution-y 1080
+          --resolution-x 640
+          --resolution-y 480
           --background-color "#151515"
           --auto-crop
           '
@@ -252,6 +258,8 @@ ext:
           - hardware/front-panel/front-panel.kicad_pcb
           - .kibot/front-panel.kibot.yaml
         cache-dir: hardware/front-panel/kibot-output
+        restore-to-worktree:
+          - 'blender/**/*.pcb3d'
         command: >
           kibot
           -c .kibot/front-panel.kibot.yaml
@@ -262,8 +270,9 @@ ext:
     # Generate front-panel Blender renders (after pcb3d is built)
     - run:
         key: front-panel-renders
+        depends-on:
+          - front-panel-pcb3d
         sources:
-          - hardware/front-panel/front-panel.kicad_pcb
           - .kibot/scripts/render_boards_blender.py
         source-commands:
           - 'python3 .kibot/scripts/list_3d_models.py hardware/front-panel/front-panel.kicad_pcb'
@@ -277,8 +286,8 @@ ext:
           --camera-view top
           --orthographic
           --samples ${BLENDER_SAMPLES:-100}
-          --resolution-x 1920
-          --resolution-y 1080
+          --resolution-x 640
+          --resolution-y 480
           --background-color "#151515"
           --auto-crop
           &&
@@ -288,8 +297,8 @@ ext:
           --output hardware/front-panel/kibot-output/docs/renders/front-panel_3D_perspective.png
           --camera-view angle
           --samples ${BLENDER_SAMPLES:-100}
-          --resolution-x 1920
-          --resolution-y 1080
+          --resolution-x 640
+          --resolution-y 480
           --background-color "#151515"
           --auto-crop
           '
@@ -301,10 +310,11 @@ ext:
     # Generate stacked board render (after all three boards are built)
     - run:
         key: stacked-render
+        depends-on:
+          - control-board
+          - main-board
+          - front-panel-pcb3d
         sources:
-          - hardware/front-panel/front-panel.kicad_pcb
-          - hardware/control-board/control-board.kicad_pcb
-          - hardware/main-board/main-board.kicad_pcb
           - .kibot/scripts/render_boards_blender.py
         source-commands:
           - 'python3 .kibot/scripts/list_3d_models.py hardware/front-panel/front-panel.kicad_pcb'
@@ -324,8 +334,8 @@ ext:
           --board-shift-y -10.859
           --output docs/generated/stacked-output/stacked_render.png
           --samples ${BLENDER_SAMPLES:-100}
-          --resolution-x 1920
-          --resolution-y 1080
+          --resolution-x 640
+          --resolution-y 480
           --background-color "#151515"
           --auto-crop
           '
@@ -335,3 +345,4 @@ ext:
           files: '**/*.png'
           into: modules/ROOT/images/generated/stacked
 
+      download: true

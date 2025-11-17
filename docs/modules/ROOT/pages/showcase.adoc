@@ -8,44 +8,49 @@ NOTE: Real photographs will be added to this page once the modules are assembled
 == Complete Stack
 
 [.text-center]
-image::generated/stacked/stacked_render.png[Stacked PCB Assembly,width=80%,align=center]
+image::generated/stacked/stacked_render.png[Stacked PCB Assembly,width=100%,align=center]
 
 The complete module stack showing the main board, control board, and front panel assembled together.
 
+== Front Panel
+
+.Top View
+[.text-center]
+image::generated/front-panel/renders/front-panel_3D_top.png[Front Panel Top,width=30%,align=center]
+
+.Perspective View
+[.text-center]
+image::generated/front-panel/renders/front-panel_3D_perspective.png[Front Panel Perspective,width=100%,align=center]
+
+
 == Control Board
 
-=== Top
-[.text-center]
-image::generated/control-board/renders/control-board_3D_top.png[Control Board Top,width=60%,align=center]
+[cols="1,1",frame=none,grid=none]
+|===
+a|
+.Top View
+image::generated/control-board/renders/control-board_3D_top.png[Control Board Top,width=100%]
+a|
+.Bottom View
+image::generated/control-board/renders/control-board_3D_bottom.png[Control Board Bottom,width=100%]
+|===
 
-=== Bottom
+.Perspective View
 [.text-center]
-image::generated/control-board/renders/control-board_3D_bottom.png[Control Board Bottom,width=60%,align=center]
-
-=== Perspective
-[.text-center]
-image::generated/control-board/renders/control-board_3D_perspective.png[Control Board Perspective,width=70%,align=center]
+image::generated/control-board/renders/control-board_3D_perspective.png[Control Board Perspective,width=100%,align=center]
 
 == Main Board
 
-=== Top Vie
-[.text-center]
-image::generated/main-board/renders/main-board_3D_top.png[Main Board Top,width=60%,align=center]
+[cols="1,1",frame=none,grid=none]
+|===
+a|
+.Top View
+image::generated/main-board/renders/main-board_3D_top.png[Main Board Top,width=100%]
+a|
+.Bottom View
+image::generated/main-board/renders/main-board_3D_bottom.png[Main Board Bottom,width=100%]
+|===
 
-=== Bottom Vie
+.Perspective View
 [.text-center]
-image::generated/main-board/renders/main-board_3D_bottom.png[Main Board Bottom,width=60%,align=center]
-
-=== Perspective
-[.text-center]
-image::generated/main-board/renders/main-board_3D_perspective.png[Main Board Perspective,width=70%,align=center]
-
-== Front Panel
-
-=== Top
-[.text-center]
-image::generated/front-panel/renders/front-panel_3D_top.png[Front Panel Top,width=60%,align=center]
-
-=== Perspective
-[.text-center]
-image::generated/front-panel/renders/front-panel_3D_perspective.png[Front Panel Perspective,width=70%,align=center]
+image::generated/main-board/renders/main-board_3D_perspective.png[Main Board Perspective,width=100%,align=center]
