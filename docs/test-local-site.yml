@@ -1,0 +1,39 @@
+# Test playbook for local development with mounted eurorack-docs-ui
+#
+# To use:
+#   npm run docs:local -- --playbook test-local-site.yml --mount /path/to/eurorack-docs-ui:/eurorack-docs-ui
+
+site:
+  title: CEM3340 VCO Documentation (Test Local Preview)
+  start_page: cem3340-vco::index.adoc
+
+content:
+  sources:
+    - url: /work
+      branches: HEAD
+      start_path: docs
+
+ui:
+  bundle:
+    url: https://github.com/carr-james/eurorack-docs-ui/releases/download/v1.6.0/ui-bundle.zip
+    snapshot: true
+
+urls:
+  latest_version_segment: stable
+  latest_version_segment_strategy: redirect:to
+
+asciidoc:
+  extensions:
+    - '/eurorack-docs-ui/extensions/ibom-block-antora'
+
+antora:
+  extensions:
+    - '/eurorack-docs-ui/extensions/collector-cache-extension'
+    - '@antora/collector-extension'
+    - '/eurorack-docs-ui/extensions/ibom-processor'
+
+runtime:
+  fetch: false
+  cache_dir: ./.cache/antora
+  log:
+    level: debug

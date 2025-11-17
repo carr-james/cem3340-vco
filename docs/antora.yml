@@ -170,8 +170,8 @@ ext:
           --camera-view top
           --orthographic
           --samples ${BLENDER_SAMPLES:-100}
-          --resolution-x 640
-          --resolution-y 480
+          --resolution-x 1080
+          --resolution-y 1920
           --background-color "#151515"
           --auto-crop
           &&
@@ -182,8 +182,8 @@ ext:
           --camera-view bottom
           --orthographic
           --samples ${BLENDER_SAMPLES:-100}
-          --resolution-x 640
-          --resolution-y 480
+          --resolution-x 1920
+          --resolution-y 1080
           --background-color "#151515"
           --auto-crop
           &&
@@ -193,8 +193,8 @@ ext:
           --output hardware/control-board/kibot-output/docs/renders/control-board_3D_perspective.png
           --camera-view angle
           --samples ${BLENDER_SAMPLES:-100}
-          --resolution-x 640
-          --resolution-y 480
+          --resolution-x 1920
+          --resolution-y 1080
           --background-color "#151515"
           --auto-crop
           '
@@ -222,8 +222,8 @@ ext:
           --camera-view top
           --orthographic
           --samples ${BLENDER_SAMPLES:-100}
-          --resolution-x 640
-          --resolution-y 480
+          --resolution-x 1920
+          --resolution-y 1080
           --background-color "#151515"
           --auto-crop
           &&
@@ -234,8 +234,8 @@ ext:
           --camera-view bottom
           --orthographic
           --samples ${BLENDER_SAMPLES:-100}
-          --resolution-x 640
-          --resolution-y 480
+          --resolution-x 1920
+          --resolution-y 1080
           --background-color "#151515"
           --auto-crop
           &&
@@ -245,8 +245,8 @@ ext:
           --output hardware/main-board/kibot-output/docs/renders/main-board_3D_perspective.png
           --camera-view angle
           --samples ${BLENDER_SAMPLES:-100}
-          --resolution-x 640
-          --resolution-y 480
+          --resolution-x 1920
+          --resolution-y 1080
           --background-color "#151515"
           --auto-crop
           '
@@ -290,8 +290,8 @@ ext:
           --camera-view top
           --orthographic
           --samples ${BLENDER_SAMPLES:-100}
-          --resolution-x 640
-          --resolution-y 480
+          --resolution-x 1920
+          --resolution-y 1080
           --background-color "#151515"
           --auto-crop
           &&
@@ -301,8 +301,8 @@ ext:
           --output hardware/front-panel/kibot-output/docs/renders/front-panel_3D_perspective.png
           --camera-view angle
           --samples ${BLENDER_SAMPLES:-100}
-          --resolution-x 640
-          --resolution-y 480
+          --resolution-x 1920
+          --resolution-y 1080
           --background-color "#151515"
           --auto-crop
           '
@@ -338,8 +338,8 @@ ext:
           --board-shift-y -10.859
           --output docs/generated/stacked-output/stacked_render.png
           --samples ${BLENDER_SAMPLES:-100}
-          --resolution-x 640
-          --resolution-y 480
+          --resolution-x 1920
+          --resolution-y 1080
           --background-color "#151515"
           --auto-crop
           '
