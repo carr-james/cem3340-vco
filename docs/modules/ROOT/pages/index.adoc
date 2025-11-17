@@ -15,7 +15,7 @@ A Eurorack-format voltage-controlled oscillator (VCO) built around the legendary
 
 This module is a faithful recreation of the excellent https://github.com/kassu/kassutronics/tree/master/documentation/VCO%203340[Kassutronics VCO 3340] design.
 
-video::stacked_render_animation.mp4[width=100%,align=left,opts="autoplay,loop,nocontrols,muted"]
+video::stacked_render_animation.mp4[width=100%,align=center,opts="autoplay,loop,nocontrols,muted"]
 
 == Project Structure
 
