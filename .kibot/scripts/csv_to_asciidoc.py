@@ -46,7 +46,7 @@ def collect_unique_notes(rows: List[Dict[str, str]], note_column: str) -> Dict[s
 
 def csv_to_asciidoc_table(csv_file: Path, output_file: Path = None,
                           datasheet_column: Optional[str] = None,
-                          note_prefix: str = '') -> str:
+                          note_prefix: str = '', secondary_output: Path = None) -> str:
     """
     Convert a CSV BOM file to an AsciiDoc table.
 
@@ -59,6 +59,7 @@ def csv_to_asciidoc_table(csv_file: Path, output_file: Path = None,
         output_file: Optional path to output file. If None, returns string.
         datasheet_column: Optional column name containing datasheet URLs to merge into Value
         note_prefix: Optional prefix for note anchors to ensure uniqueness across multiple BOMs
+        secondary_output: Optional second path to write the same output
 
     Returns:
         AsciiDoc table as string
@@ -137,6 +138,14 @@ def csv_to_asciidoc_table(csv_file: Path, output_file: Path = None,
                 out.write("\n")
             print(f"✓ Converted {csv_file} to {output_file}")
 
+        if secondary_output:
+            # Create parent directory if it doesn't exist
+            secondary_output.parent.mkdir(parents=True, exist_ok=True)
+            with open(secondary_output, 'w', encoding='utf-8') as out:
+                out.write(result)
+                out.write("\n")
+            print(f"✓ Also wrote to {secondary_output}")
+
         return result
 
 
@@ -160,6 +169,8 @@ Examples:
                        help='Column name containing datasheet URLs to merge into Value column')
     parser.add_argument('--prefix', type=str, metavar='PREFIX', default='',
                        help='Prefix for note anchors to ensure uniqueness across multiple BOMs (e.g., "control-board-")')
+    parser.add_argument('--secondary-output', type=Path, metavar='PATH',
+                       help='Optional second output path to write the same content')
 
     args = parser.parse_args()
 
@@ -167,7 +178,7 @@ Examples:
         print(f"Error: Input file '{args.input}' not found", file=sys.stderr)
         sys.exit(1)
 
-    result = csv_to_asciidoc_table(args.input, args.output, args.datasheet_column, args.prefix)
+    result = csv_to_asciidoc_table(args.input, args.output, args.datasheet_column, args.prefix, args.secondary_output)
 
     if not args.output:
         print(result)

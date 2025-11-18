@@ -41,9 +41,10 @@ ext:
           &&
           python3 .kibot/scripts/csv_to_asciidoc.py
           hardware/control-board/kibot-output/bom/control-board_bom.csv
-          docs/modules/ROOT/partials/generated/bom/control-board_bom.adoc
+          hardware/control-board/kibot-output/docs/modules/ROOT/partials/generated/bom/control-board_bom.adoc
           --datasheet-column Datasheet
           --prefix control-board-
+          --secondary-output docs/modules/ROOT/partials/generated/bom/control-board_bom.adoc
           '
       scan:
         # Schematics SVG - to images (for inline display)
@@ -78,7 +79,7 @@ ext:
           files: '**/*.csv'
           into: modules/ROOT/attachments/generated/control-board/bom
         # Generated BOM partials
-        - dir: docs/modules/ROOT/partials/generated/bom
+        - dir: hardware/control-board/kibot-output/docs/modules/ROOT/partials/generated/bom
           files: 'control-board_bom.adoc'
           into: modules/ROOT/partials/generated/bom
 
@@ -110,9 +111,10 @@ ext:
           &&
           python3 .kibot/scripts/csv_to_asciidoc.py
           hardware/main-board/kibot-output/bom/main-board_bom.csv
-          docs/modules/ROOT/partials/generated/bom/main-board_bom.adoc
+          hardware/main-board/kibot-output/docs/modules/ROOT/partials/generated/bom/main-board_bom.adoc
           --datasheet-column Datasheet
           --prefix main-board-
+          --secondary-output docs/modules/ROOT/partials/generated/bom/main-board_bom.adoc
           '
       scan:
         # Schematics SVG - to images (for inline display)
@@ -147,7 +149,7 @@ ext:
           files: '**/*.csv'
           into: modules/ROOT/attachments/generated/main-board/bom
         # Generated BOM partials
-        - dir: docs/modules/ROOT/partials/generated/bom
+        - dir: hardware/main-board/kibot-output/docs/modules/ROOT/partials/generated/bom
           files: 'main-board_bom.adoc'
           into: modules/ROOT/partials/generated/bom
 
