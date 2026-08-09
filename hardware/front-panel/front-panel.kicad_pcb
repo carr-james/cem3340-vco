@@ -1,7 +1,7 @@
 (kicad_pcb
-	(version 20241229)
+	(version 20260206)
 	(generator "pcbnew")
-	(generator_version "9.0")
+	(generator_version "10.0")
 	(general
 		(thickness 1.6)
 		(legacy_teardrops no)
@@ -77,7 +77,20 @@
 		)
 		(pad_to_mask_clearance 0)
 		(allow_soldermask_bridges_in_footprints no)
-		(tenting front back)
+		(tenting
+			(front yes)
+			(back yes)
+		)
+		(covering
+			(front no)
+			(back no)
+		)
+		(plugging
+			(front no)
+			(back no)
+		)
+		(capping no)
+		(filling no)
 		(pcbplotparams
 			(layerselection 0x00000000_00000000_55555555_5755f5ff)
 			(plot_on_all_layers_selection 0x00000000_00000000_00000000_00000000)
@@ -86,15 +99,12 @@
 			(usegerberattributes yes)
 			(usegerberadvancedattributes yes)
 			(creategerberjobfile yes)
-			(dashed_line_dash_ratio 12.000000)
-			(dashed_line_gap_ratio 3.000000)
+			(dashed_line_dash_ratio 12)
+			(dashed_line_gap_ratio 3)
 			(svgprecision 4)
 			(plotframeref no)
 			(mode 1)
 			(useauxorigin no)
-			(hpglpennumber 1)
-			(hpglpenspeed 20)
-			(hpglpendiameter 15.000000)
 			(pdf_front_fp_property_popups yes)
 			(pdf_back_fp_property_popups yes)
 			(pdf_metadata yes)
@@ -118,8 +128,6 @@
 			(outputdirectory "")
 		)
 	)
-	(net 0 "")
-	(net 1 "unconnected-(JP3-B-Pad2)")
 	(footprint "Eurorack Common:Thonkicon_FP"
 		(locked yes)
 		(layer "F.Cu")
@@ -194,6 +202,7 @@
 		(sheetname "/")
 		(sheetfile "front-panel.kicad_sch")
 		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 6.48)
 			(end 3.05 6.48)
@@ -282,6 +291,7 @@
 			)
 		)
 		(attr board_only exclude_from_pos_files exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_poly
 			(pts
 				(xy -3.749715 -2.711187) (xy -3.75 -2.711187) (xy -3.75 2.711187) (xy -3.749715 2.711187) (xy -2.025685 2.711187)
@@ -392,6 +402,7 @@
 		(sheetname "/")
 		(sheetfile "front-panel.kicad_sch")
 		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 6.48)
 			(end 3.05 6.48)
@@ -497,6 +508,7 @@
 		(sheetname "/")
 		(sheetfile "front-panel.kicad_sch")
 		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
 			(end 2.525 0)
@@ -595,6 +607,7 @@
 		(sheetname "/")
 		(sheetfile "front-panel.kicad_sch")
 		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 6.48)
 			(end 3.05 6.48)
@@ -702,6 +715,7 @@
 		(sheetname "/")
 		(sheetfile "front-panel.kicad_sch")
 		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 6.48)
 			(end 3.05 6.48)
@@ -809,6 +823,7 @@
 		(sheetname "/")
 		(sheetfile "front-panel.kicad_sch")
 		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 6.48)
 			(end 3.05 6.48)
@@ -916,6 +931,7 @@
 		(sheetname "/")
 		(sheetfile "front-panel.kicad_sch")
 		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 6.48)
 			(end 3.05 6.48)
@@ -1022,6 +1038,7 @@
 		(sheetname "/")
 		(sheetfile "front-panel.kicad_sch")
 		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 2.5 -7.61)
 			(end 6.05 -7.61)
@@ -1152,6 +1169,7 @@
 			)
 		)
 		(attr board_only exclude_from_pos_files exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_poly
 			(pts
 				(xy 0.439355 -2.283105) (xy -0.987586 -2.283105) (xy -2.357449 2.283105) (xy -0.987586 2.283105)
@@ -1253,6 +1271,7 @@
 		(sheetname "/")
 		(sheetfile "front-panel.kicad_sch")
 		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 6.48)
 			(end 3.05 6.48)
@@ -1360,6 +1379,7 @@
 		(sheetname "/")
 		(sheetfile "front-panel.kicad_sch")
 		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 6.48)
 			(end 3.05 6.48)
@@ -1448,6 +1468,7 @@
 			)
 		)
 		(attr board_only exclude_from_pos_files exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_poly
 			(pts
 				(xy -0.226027 -0.140411) (xy 0.068493 -0.140411) (xy 0.220462 -0.161815) (xy 0.333904 -0.226027)
@@ -1542,6 +1563,7 @@
 			)
 		)
 		(attr board_only exclude_from_pos_files exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_poly
 			(pts
 				(xy 2.114726 0.821918) (xy 2.285959 0.787671) (xy 2.388699 0.684932) (xy 2.422945 0.513699) (xy 2.422945 -0.547945)
@@ -1638,6 +1660,7 @@
 			)
 		)
 		(attr board_only exclude_from_pos_files exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_poly
 			(pts
 				(xy -4.75 -2.283105) (xy -5.320776 -2.283105) (xy -5.320776 2.283105) (xy -4.75 2.283105) (xy -3.962329 2.283105)
@@ -1737,6 +1760,7 @@
 			)
 		)
 		(attr board_only exclude_from_pos_files exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_poly
 			(pts
 				(xy -3.706849 2) (xy -4.69863 -2) (xy -3.849315 -2) (xy -3.29589 0.526027) (xy -3.227397 0.860274)
@@ -1849,6 +1873,7 @@
 			)
 		)
 		(attr board_only exclude_from_pos_files exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_poly
 			(pts
 				(xy -3.749715 -2.962329) (xy -3.75 -2.962329) (xy -3.75 2.962329) (xy -3.749715 2.962329) (xy -2.813356 2.962329)
@@ -1929,6 +1954,7 @@
 			)
 		)
 		(attr board_only exclude_from_pos_files exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_poly
 			(pts
 				(xy -2.383562 -0.106164) (xy -2.044521 -0.106164) (xy -1.896832 -0.130993) (xy -1.782534 -0.205479)
@@ -2030,6 +2056,7 @@
 			)
 		)
 		(attr board_only exclude_from_pos_files exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_poly
 			(pts
 				(xy -1 -1.535531) (xy -1.856164 -1.535531) (xy -2.777483 1.535531) (xy -1.856164 1.535531) (xy -1 1.535531)
@@ -2103,6 +2130,7 @@
 			)
 		)
 		(attr board_only exclude_from_pos_files exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_poly
 			(pts
 				(xy -1.282534 -0.288813) (xy -0.984589 -0.288813) (xy -0.829195 -0.310217) (xy -0.705479 -0.374429)
@@ -2219,6 +2247,7 @@
 			)
 		)
 		(attr board_only exclude_from_pos_files exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_poly
 			(pts
 				(xy -2.386986 -0.123288) (xy -2.047945 -0.123288) (xy -1.900257 -0.148116) (xy -1.785959 -0.222603)
@@ -2315,6 +2344,7 @@
 			)
 		)
 		(attr board_only exclude_from_pos_files exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_poly
 			(pts
 				(xy 2.114726 0.821918) (xy 2.285959 0.787671) (xy 2.388699 0.684932) (xy 2.422945 0.513699) (xy 2.422945 -0.547945)
@@ -2411,6 +2441,7 @@
 			)
 		)
 		(attr board_only exclude_from_pos_files exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_poly
 			(pts
 				(xy -1.688356 0.304795) (xy -1.349315 0.304795) (xy -1.198202 0.282106) (xy -1.07363 0.214041) (xy -0.984161 0.108305)
@@ -2531,6 +2562,7 @@
 		(sheetname "/")
 		(sheetfile "front-panel.kicad_sch")
 		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 2.5 -7.61)
 			(end 6.05 -7.61)
@@ -2661,6 +2693,7 @@
 			)
 		)
 		(attr board_only exclude_from_pos_files exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_poly
 			(pts
 				(xy -0.275685 0.273973) (xy 0.145548 0.273973) (xy 0.025685 -0.328767) (xy -0.023973 -0.587329)
@@ -2784,6 +2817,7 @@
 		(sheetname "/")
 		(sheetfile "front-panel.kicad_sch")
 		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 2.5 -7.61)
 			(end 6.05 -7.61)
@@ -2914,6 +2948,7 @@
 			)
 		)
 		(attr board_only exclude_from_pos_files exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_poly
 			(pts
 				(xy -4.068493 -2.106164) (xy -5.495434 -2.106164) (xy -6.759132 -2.106164) (xy -5.495434 2.106164)
@@ -3017,6 +3052,7 @@
 		(sheetname "/")
 		(sheetfile "front-panel.kicad_sch")
 		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 6.48)
 			(end 3.05 6.48)
@@ -3051,8 +3087,8 @@
 		(embedded_fonts no)
 	)
 	(gr_rect
-		(start 41.095 116.155)
-		(end 48.595 124.155)
+		(start 20.795 116.155)
+		(end 28.295 124.155)
 		(stroke
 			(width 0)
 			(type solid)
@@ -3060,8 +3096,8 @@
 		(fill yes)
 		(locked yes)
 		(layers "F.Cu" "F.Mask")
-		(net 1)
-		(uuid "2a269617-2ce8-48f0-96b5-88174e9f7f05")
+		(net "unconnected-(JP3-B-Pad2)")
+		(uuid "6c9ee441-a7b0-4ccb-b934-ef8e39f38364")
 	)
 	(gr_rect
 		(start 30.945 116.155)
@@ -3073,12 +3109,12 @@
 		(fill yes)
 		(locked yes)
 		(layers "F.Cu" "F.Mask")
-		(net 1)
+		(net "unconnected-(JP3-B-Pad2)")
 		(uuid "2ba1d489-e727-40e2-8fb4-2a710c02627f")
 	)
 	(gr_rect
-		(start 20.795 116.155)
-		(end 28.295 124.155)
+		(start 41.095 116.155)
+		(end 48.595 124.155)
 		(stroke
 			(width 0)
 			(type solid)
@@ -3086,8 +3122,8 @@
 		(fill yes)
 		(locked yes)
 		(layers "F.Cu" "F.Mask")
-		(net 1)
-		(uuid "6c9ee441-a7b0-4ccb-b934-ef8e39f38364")
+		(net "unconnected-(JP3-B-Pad2)")
+		(uuid "2a269617-2ce8-48f0-96b5-88174e9f7f05")
 	)
 	(gr_rect
 		(start 51.245 116.155)
@@ -3099,69 +3135,8 @@
 		(fill yes)
 		(locked yes)
 		(layers "F.Cu" "F.Mask")
-		(net 1)
+		(net "unconnected-(JP3-B-Pad2)")
 		(uuid "cf245d0b-6897-49db-a326-b3d59c795f8f")
-	)
-	(gr_rect
-		(start 51.230285 100.575593)
-		(end 58.73 108.564406)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(fill yes)
-		(locked yes)
-		(layer "F.SilkS")
-		(uuid "288c7e7c-c35f-4634-a317-85b05b6b90a4")
-	)
-	(gr_rect
-		(start 41.088571 100.575593)
-		(end 48.588286 108.564406)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(fill yes)
-		(locked yes)
-		(layer "F.SilkS")
-		(uuid "366bf0cc-63d1-43f9-a45c-569e93b14d49")
-	)
-	(gr_poly
-		(pts
-			(xy 24.52558 83.445) (xy 20.92558 87.045) (xy 20.92558 95.245) (xy 37.52558 95.245) (xy 37.52558 83.445)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(fill yes)
-		(locked yes)
-		(layer "F.SilkS")
-		(uuid "4b3068f2-90a4-41b6-b865-852d9ff484cf")
-	)
-	(gr_arc
-		(start 33.705 48.42)
-		(mid 39.737239 26.0245)
-		(end 45.705136 48.437231)
-		(stroke
-			(width 0.5)
-			(type solid)
-		)
-		(locked yes)
-		(layer "F.SilkS")
-		(uuid "5fb8913d-57f0-4b40-93cc-429b2e8d37e1")
-	)
-	(gr_rect
-		(start 20.805143 100.575593)
-		(end 28.304858 108.564406)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(fill yes)
-		(locked yes)
-		(layer "F.SilkS")
-		(uuid "76f41823-df46-4c1a-9fce-21bf7d9dfc21")
 	)
 	(gr_poly
 		(pts
@@ -3176,6 +3151,31 @@
 		(layer "F.SilkS")
 		(uuid "7c67f8e9-b9fa-4afc-a31d-156980c40227")
 	)
+	(gr_poly
+		(pts
+			(xy 24.52558 83.445) (xy 20.92558 87.045) (xy 20.92558 95.245) (xy 37.52558 95.245) (xy 37.52558 83.445)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill yes)
+		(locked yes)
+		(layer "F.SilkS")
+		(uuid "4b3068f2-90a4-41b6-b865-852d9ff484cf")
+	)
+	(gr_rect
+		(start 20.805143 100.575593)
+		(end 28.304858 108.564406)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill yes)
+		(locked yes)
+		(layer "F.SilkS")
+		(uuid "76f41823-df46-4c1a-9fce-21bf7d9dfc21")
+	)
 	(gr_arc
 		(start 26.071936 75.076892)
 		(mid 29.563109 61.997556)
@@ -3187,6 +3187,42 @@
 		(locked yes)
 		(layer "F.SilkS")
 		(uuid "8ed94280-2a8a-4968-b0d5-94b637ca5d4e")
+	)
+	(gr_rect
+		(start 30.946857 100.575593)
+		(end 38.446572 108.564406)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill yes)
+		(locked yes)
+		(layer "F.SilkS")
+		(uuid "c7a6525a-0b76-4b88-9696-71830d5bfabb")
+	)
+	(gr_arc
+		(start 33.705 48.42)
+		(mid 39.737239 26.0245)
+		(end 45.705136 48.437231)
+		(stroke
+			(width 0.5)
+			(type solid)
+		)
+		(locked yes)
+		(layer "F.SilkS")
+		(uuid "5fb8913d-57f0-4b40-93cc-429b2e8d37e1")
+	)
+	(gr_rect
+		(start 41.088571 100.575593)
+		(end 48.588286 108.564406)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill yes)
+		(locked yes)
+		(layer "F.SilkS")
+		(uuid "366bf0cc-63d1-43f9-a45c-569e93b14d49")
 	)
 	(gr_arc
 		(start 46.396936 90.351892)
@@ -3201,8 +3237,8 @@
 		(uuid "a8eb0f3a-cdde-4b6e-9666-3ca575c08ae6")
 	)
 	(gr_rect
-		(start 30.946857 100.575593)
-		(end 38.446572 108.564406)
+		(start 51.230285 100.575593)
+		(end 58.73 108.564406)
 		(stroke
 			(width 0)
 			(type solid)
@@ -3210,29 +3246,7 @@
 		(fill yes)
 		(locked yes)
 		(layer "F.SilkS")
-		(uuid "c7a6525a-0b76-4b88-9696-71830d5bfabb")
-	)
-	(gr_circle
-		(center 27.05 134.5)
-		(end 28.7 134.5)
-		(stroke
-			(width 0.05)
-			(type default)
-		)
-		(fill no)
-		(layer "Edge.Cuts")
-		(uuid "238b1312-d9af-47e1-9a3d-ef1ef8da11d7")
-	)
-	(gr_circle
-		(center 52.45 134.5)
-		(end 54.1 134.5)
-		(stroke
-			(width 0.05)
-			(type default)
-		)
-		(fill no)
-		(layer "Edge.Cuts")
-		(uuid "3c7ad426-4559-487c-9a71-0d8c4026993b")
+		(uuid "288c7e7c-c35f-4634-a317-85b05b6b90a4")
 	)
 	(gr_rect
 		(start 19.55 9)
@@ -3246,6 +3260,28 @@
 		(uuid "5866a046-7227-4c94-af3e-e34934c6c4e0")
 	)
 	(gr_circle
+		(center 27.05 12)
+		(end 28.7 12)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "Edge.Cuts")
+		(uuid "8717ac0e-d6cb-4a37-a009-5777858df56b")
+	)
+	(gr_circle
+		(center 27.05 134.5)
+		(end 28.7 134.5)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "Edge.Cuts")
+		(uuid "238b1312-d9af-47e1-9a3d-ef1ef8da11d7")
+	)
+	(gr_circle
 		(center 52.45 12)
 		(end 54.1 12)
 		(stroke
@@ -3257,15 +3293,27 @@
 		(uuid "6ad30033-f043-4f75-9dbe-feec7996e108")
 	)
 	(gr_circle
-		(center 27.05 12)
-		(end 28.7 12)
+		(center 52.45 134.5)
+		(end 54.1 134.5)
 		(stroke
 			(width 0.05)
 			(type default)
 		)
 		(fill no)
 		(layer "Edge.Cuts")
-		(uuid "8717ac0e-d6cb-4a37-a009-5777858df56b")
+		(uuid "3c7ad426-4559-487c-9a71-0d8c4026993b")
+	)
+	(gr_rect
+		(start 19.995 19.984)
+		(end 59.495 126.484)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(locked yes)
+		(layer "User.1")
+		(uuid "fdbaa5fd-9709-4f2f-9b7e-85749a1dfced")
 	)
 	(gr_circle
 		(center 29.57 69.005)
@@ -3303,24 +3351,12 @@
 		(layer "User.1")
 		(uuid "804d16c0-db3e-4330-95b8-bf9c302f71fc")
 	)
-	(gr_rect
-		(start 19.995 19.984)
-		(end 59.495 126.484)
-		(stroke
-			(width 0.1)
-			(type solid)
-		)
-		(fill no)
-		(locked yes)
-		(layer "User.1")
-		(uuid "fdbaa5fd-9709-4f2f-9b7e-85749a1dfced")
-	)
 	(segment
 		(start 55.98 98.83)
 		(end 55.98 89.56)
 		(width 0.8)
 		(layers "F.Cu" "F.Mask")
-		(net 0)
+		(net "")
 		(uuid "0770ac89-0733-41b5-b4fc-500e1fd64a98")
 	)
 	(segment
@@ -3328,7 +3364,7 @@
 		(end 55.98 98.83)
 		(width 0.8)
 		(layers "F.Cu" "F.Mask")
-		(net 0)
+		(net "")
 		(uuid "7340a7bf-8b88-40ef-ad25-22c0d75efaf1")
 	)
 	(segment
@@ -3336,7 +3372,7 @@
 		(end 29.62 50.45)
 		(width 0.8)
 		(layers "F.Cu" "F.Mask")
-		(net 0)
+		(net "")
 		(uuid "b7ac260c-456a-4244-9487-3ef73bff73e3")
 	)
 	(segment
@@ -3344,7 +3380,7 @@
 		(end 31.6 48.47)
 		(width 0.8)
 		(layers "F.Cu" "F.Mask")
-		(net 0)
+		(net "")
 		(uuid "f33c469a-0bbe-41d7-a990-3035524ad210")
 	)
 	(via
@@ -3352,7 +3388,17 @@
 		(size 0.6)
 		(drill 0.3)
 		(layers "F.Cu" "B.Cu")
-		(net 0)
+		(capping no)
+		(covering
+			(front no)
+			(back no)
+		)
+		(plugging
+			(front no)
+			(back no)
+		)
+		(filling no)
+		(net "")
 		(uuid "6bb8501a-6811-449c-be05-c8139c21dec3")
 	)
 	(via
@@ -3360,7 +3406,17 @@
 		(size 0.6)
 		(drill 0.3)
 		(layers "F.Cu" "B.Cu")
-		(net 0)
+		(capping no)
+		(covering
+			(front no)
+			(back no)
+		)
+		(plugging
+			(front no)
+			(back no)
+		)
+		(filling no)
+		(net "")
 		(uuid "80474a0b-9920-4ab3-b125-c48f2865467f")
 	)
 	(via
@@ -3368,7 +3424,17 @@
 		(size 0.6)
 		(drill 0.3)
 		(layers "F.Cu" "B.Cu")
-		(net 0)
+		(capping no)
+		(covering
+			(front no)
+			(back no)
+		)
+		(plugging
+			(front no)
+			(back no)
+		)
+		(filling no)
+		(net "")
 		(uuid "92c9ea42-8781-4fce-9909-971bd434cc9c")
 	)
 	(via
@@ -3376,7 +3442,17 @@
 		(size 0.6)
 		(drill 0.3)
 		(layers "F.Cu" "B.Cu")
-		(net 0)
+		(capping no)
+		(covering
+			(front no)
+			(back no)
+		)
+		(plugging
+			(front no)
+			(back no)
+		)
+		(filling no)
+		(net "")
 		(uuid "df3dec83-b348-44c3-bd2c-edc2f61750b7")
 	)
 	(group ""
